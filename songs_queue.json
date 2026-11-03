@@ -162,14 +162,14 @@
       "duration": 13.5,
       "stanzas": [
         {
-          "start": 0,
+          "start": 0.0,
           "end": 4.5,
           "lines": [
             {
               "words": [
                 {
                   "w": "Husn",
-                  "s": 0,
+                  "s": 0.0,
                   "e": 0.24
                 },
                 {
@@ -203,7 +203,7 @@
               "words": [
                 {
                   "w": "Husn",
-                  "s": 5,
+                  "s": 5.0,
                   "e": 5.26
                 },
                 {
@@ -267,7 +267,7 @@
     },
     "scene2": {
       "start": 13.5,
-      "end": 22,
+      "end": 22.0,
       "line1": {
         "text": "husn tera",
         "start": 14.86,
@@ -286,18 +286,18 @@
       "line4": {
         "text": "tauba",
         "start": 19.8,
-        "end": 22
+        "end": 22.0
       }
     },
     "scene3": {
-      "start": 22,
+      "start": 22.0,
       "end": 27.5,
       "line1": "lakh lakh nakhre",
       "line2": "TERA NAADAAN"
     },
     "scene4": {
       "start": 27.5,
-      "end": 33,
+      "end": 33.0,
       "heroTitle": "TAUBA TAUBA",
       "subtitle": "husn tera tauba tauba...",
       "pillBadge": "Karan Aujla · Tauba Tauba"
@@ -348,7 +348,7 @@
       "duration": 13.5,
       "stanzas": [
         {
-          "start": 0,
+          "start": 0.0,
           "end": 6.5,
           "lines": [
             {
@@ -424,11 +424,11 @@
                 {
                   "w": "meri",
                   "s": 11.2,
-                  "e": 12
+                  "e": 12.0
                 },
                 {
                   "w": "jaan",
-                  "s": 12,
+                  "s": 12.0,
                   "e": 12.8
                 }
               ]
@@ -439,7 +439,7 @@
     },
     "scene2": {
       "start": 13.5,
-      "end": 22,
+      "end": 22.0,
       "line1": {
         "text": "tu ban ja",
         "start": 13.5,
@@ -448,28 +448,28 @@
       "line2": {
         "text": "SOULMATE",
         "start": 15.5,
-        "end": 18
+        "end": 18.0
       },
       "line3": {
         "text": "meri jaan",
-        "start": 18,
-        "end": 20
+        "start": 18.0,
+        "end": 20.0
       },
       "line4": {
         "text": "soulmate",
-        "start": 20,
-        "end": 22
+        "start": 20.0,
+        "end": 22.0
       }
     },
     "scene3": {
-      "start": 22,
+      "start": 22.0,
       "end": 27.5,
       "line1": "tujhe chahta hoon",
       "line2": "BEPANAAH"
     },
     "scene4": {
       "start": 27.5,
-      "end": 33,
+      "end": 33.0,
       "heroTitle": "SOULMATE",
       "subtitle": "tu ban ja mera soulmate...",
       "pillBadge": "Arijit Singh · Soulmate"
@@ -520,7 +520,7 @@
       "duration": 13.5,
       "stanzas": [
         {
-          "start": 0,
+          "start": 0.0,
           "end": 6.4,
           "lines": [
             {
@@ -596,7 +596,7 @@
     },
     "scene2": {
       "start": 13.5,
-      "end": 22,
+      "end": 22.0,
       "line1": {
         "text": "ve kamleya",
         "start": 13.5,
@@ -605,28 +605,28 @@
       "line2": {
         "text": "VE KAMLEYA",
         "start": 15.5,
-        "end": 18
+        "end": 18.0
       },
       "line3": {
         "text": "mere dil",
-        "start": 18,
-        "end": 20
+        "start": 18.0,
+        "end": 20.0
       },
       "line4": {
         "text": "kamleya",
-        "start": 20,
-        "end": 22
+        "start": 20.0,
+        "end": 22.0
       }
     },
     "scene3": {
-      "start": 22,
+      "start": 22.0,
       "end": 27.5,
       "line1": "kyun jaave tu",
       "line2": "USKE PEECHE"
     },
     "scene4": {
       "start": 27.5,
-      "end": 33,
+      "end": 33.0,
       "heroTitle": "VE KAMLEYA",
       "subtitle": "ve kamleya mere naadaan dil...",
       "pillBadge": "Arijit Singh · Ve Kamleya"
@@ -677,7 +677,7 @@
       "duration": 13.5,
       "stanzas": [
         {
-          "start": 0,
+          "start": 0.0,
           "end": 6.2,
           "lines": [
             {
@@ -753,7 +753,7 @@
     },
     "scene2": {
       "start": 13.5,
-      "end": 22,
+      "end": 22.0,
       "line1": {
         "text": "jo tum mere",
         "start": 13.5,
@@ -762,28 +762,28 @@
       "line2": {
         "text": "HO JAO",
         "start": 15.5,
-        "end": 18
+        "end": 18.0
       },
       "line3": {
         "text": "meri har",
-        "start": 18,
-        "end": 20
+        "start": 18.0,
+        "end": 20.0
       },
       "line4": {
         "text": "duaa",
-        "start": 20,
-        "end": 22
+        "start": 20.0,
+        "end": 22.0
       }
     },
     "scene3": {
-      "start": 22,
+      "start": 22.0,
       "end": 27.5,
       "line1": "kya darr phir",
       "line2": "IS JAHAAN KA"
     },
     "scene4": {
       "start": 27.5,
-      "end": 33,
+      "end": 33.0,
       "heroTitle": "JO TUM MERE HO",
       "subtitle": "jo tum mere ho...",
       "pillBadge": "Anuv Jain · Jo Tum Mere Ho"
@@ -834,7 +834,7 @@
       "duration": 13.5,
       "stanzas": [
         {
-          "start": 0,
+          "start": 0.0,
           "end": 6.5,
           "lines": [
             {
@@ -925,7 +925,7 @@
     },
     "scene2": {
       "start": 13.5,
-      "end": 22,
+      "end": 22.0,
       "line1": {
         "text": "pehle bhi main",
         "start": 13.5,
@@ -934,28 +934,28 @@
       "line2": {
         "text": "TUMSE MILA",
         "start": 15.5,
-        "end": 18
+        "end": 18.0
       },
       "line3": {
         "text": "pehli dafa",
-        "start": 18,
-        "end": 20
+        "start": 18.0,
+        "end": 20.0
       },
       "line4": {
         "text": "milke laga",
-        "start": 20,
-        "end": 22
+        "start": 20.0,
+        "end": 22.0
       }
     },
     "scene3": {
-      "start": 22,
+      "start": 22.0,
       "end": 27.5,
       "line1": "tune chhua toh",
       "line2": "SAANSEIN RUK GAYIN"
     },
     "scene4": {
       "start": 27.5,
-      "end": 33,
+      "end": 33.0,
       "heroTitle": "PEHLE BHI MAIN",
       "subtitle": "pehle bhi main tumse mila hoon...",
       "pillBadge": "Vishal Mishra · Pehle Bhi Main"
@@ -966,44 +966,197 @@
     "title": "Satranga",
     "artist": "Arijit Singh, Shreyas Puranik · Animal",
     "search_query": "Satranga Arijit Singh Animal official audio",
-    "chorus_start": "00:00:52.00",
+    "chorus_start": "00:00:47.80",
     "duration": 33,
     "hero_title": "SATRANGA",
     "symbolName": "lotus",
-    "particleType": "embers",
+    "particleType": "stardust",
     "palette": {
-      "gradientTop": "rgba(80, 42, 14, 0.95)",
-      "gradientMid": "#331805",
-      "gradientDark": "#180a01",
-      "gradientBottom": "#070300",
-      "accentPink": "#f59e0b",
-      "accentLight": "#fde68a",
-      "accentGlow": "#d97706"
+      "gradientTop": "rgba(40, 22, 60, 0.95)",
+      "gradientMid": "#1e0f30",
+      "gradientDark": "#0d0617",
+      "gradientBottom": "#040208",
+      "accentPink": "#c084fc",
+      "accentLight": "#e9d5ff",
+      "accentGlow": "#9333ea"
     },
-    "hook1": "satranga",
-    "hook2": "ISHQ TERA",
-    "hook3": "rang jaaun",
-    "hook4": "main",
-    "drop_line1": "tere bina nahi",
-    "drop_line2": "JINA GUZARA",
-    "subtitle": "satranga ban ja tu...",
-    "status": "completed",
-    "stanzas_text": [
-      {
-        "start": 0.5,
-        "end": 6.5,
-        "line1": "Tu mera rasta",
-        "line2": "tu hi manjil meri"
+    "hook1": "jogi main",
+    "hook2": "AUR GANGA",
+    "hook3": "hai ishq re",
+    "hook4": "satranga",
+    "drop_line1": "badrang main",
+    "drop_line2": "SATRANGA HAI ISHQ RE",
+    "subtitle": "jogi main aur ganga hai ishq re...",
+    "status": "pending",
+    "scene1": {
+      "duration": 13.5,
+      "stanzas": [
+        {
+          "start": 0.0,
+          "end": 5.2,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "Badrang",
+                  "s": 0.2,
+                  "e": 0.86
+                },
+                {
+                  "w": "main,",
+                  "s": 0.86,
+                  "e": 1.54
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "satranga",
+                  "s": 1.54,
+                  "e": 2.86
+                },
+                {
+                  "w": "hai",
+                  "s": 2.86,
+                  "e": 3.34
+                },
+                {
+                  "w": "ishq",
+                  "s": 3.34,
+                  "e": 4.2
+                },
+                {
+                  "w": "re",
+                  "s": 4.2,
+                  "e": 4.8
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": 5.4,
+          "end": 11.5,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "Jogi",
+                  "s": 6.06,
+                  "e": 6.8
+                },
+                {
+                  "w": "main,",
+                  "s": 6.8,
+                  "e": 7.62
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "aur",
+                  "s": 7.62,
+                  "e": 7.9
+                },
+                {
+                  "w": "ganga",
+                  "s": 7.9,
+                  "e": 8.94
+                },
+                {
+                  "w": "hai",
+                  "s": 8.94,
+                  "e": 9.4
+                },
+                {
+                  "w": "ishq",
+                  "s": 9.4,
+                  "e": 10.2
+                },
+                {
+                  "w": "re",
+                  "s": 10.2,
+                  "e": 10.94
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": 11.6,
+          "end": 14.5,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "Badrang",
+                  "s": 11.96,
+                  "e": 12.66
+                },
+                {
+                  "w": "main,",
+                  "s": 12.66,
+                  "e": 13.56
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "satranga",
+                  "s": 13.56,
+                  "e": 14.78
+                },
+                {
+                  "w": "hai",
+                  "s": 14.78,
+                  "e": 15.1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "scene2": {
+      "start": 13.5,
+      "end": 22.0,
+      "line1": {
+        "text": "jogi main",
+        "start": 13.5,
+        "end": 15.5
       },
-      {
-        "start": 7,
-        "end": 13,
-        "line1": "satranga ban ja tu",
-        "line2": "mere ishq da rang"
+      "line2": {
+        "text": "AUR GANGA",
+        "start": 15.5,
+        "end": 18.0
+      },
+      "line3": {
+        "text": "hai ishq re",
+        "start": 18.0,
+        "end": 20.0
+      },
+      "line4": {
+        "text": "satranga",
+        "start": 20.0,
+        "end": 22.0
       }
-    ],
-    "completed_at": "2026-11-03T07:27:25.995Z",
-    "video_file": "satranga_aesthetic_9_16.mp4"
+    },
+    "scene3": {
+      "start": 22.0,
+      "end": 27.5,
+      "line1": "badrang main",
+      "line2": "SATRANGA HAI ISHQ RE"
+    },
+    "scene4": {
+      "start": 27.5,
+      "end": 33.0,
+      "heroTitle": "SATRANGA",
+      "subtitle": "jogi main aur ganga hai ishq re...",
+      "pillBadge": "Arijit Singh · Satranga"
+    }
   },
   {
     "id": "ishq",
@@ -1024,161 +1177,783 @@
       "accentLight": "#a7f3d0",
       "accentGlow": "#059669"
     },
-    "hook1": "ishq tera",
-    "hook2": "ROOH DA",
-    "hook3": "sukoon hai",
-    "hook4": "mera",
-    "drop_line1": "ho gaya hai",
-    "drop_line2": "TERA DEEWANA",
-    "subtitle": "ishq tera laage jaan se pyaara...",
-    "status": "completed",
-    "stanzas_text": [
-      {
-        "start": 0.5,
-        "end": 6.5,
-        "line1": "Ishq tera laage",
-        "line2": "jaan se pyaara ve"
+    "hook1": "mere shaane par",
+    "hook2": "SAR RAKHE TU",
+    "hook3": "main neend kahun",
+    "hook4": "tu so jaaye",
+    "drop_line1": "chalo ek aisi",
+    "drop_line2": "NAZM KAHUN",
+    "subtitle": "jo lab se kahun, tu so jaaye...",
+    "status": "pending",
+    "scene1": {
+      "duration": 13.5,
+      "stanzas": [
+        {
+          "start": 0.0,
+          "end": 4.8,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "Tu",
+                  "s": 0.0,
+                  "e": 0.38
+                },
+                {
+                  "w": "so",
+                  "s": 0.38,
+                  "e": 1.2
+                },
+                {
+                  "w": "jaaye,",
+                  "s": 1.2,
+                  "e": 1.96
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "main",
+                  "s": 1.96,
+                  "e": 3.02
+                },
+                {
+                  "w": "aankh",
+                  "s": 3.02,
+                  "e": 4.2
+                },
+                {
+                  "w": "kholun",
+                  "s": 4.2,
+                  "e": 4.82
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": 4.82,
+          "end": 10.2,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "Tu",
+                  "s": 4.82,
+                  "e": 5.6
+                },
+                {
+                  "w": "aa",
+                  "s": 5.6,
+                  "e": 6.2
+                },
+                {
+                  "w": "jaaye,",
+                  "s": 6.2,
+                  "e": 7.2
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "main",
+                  "s": 7.2,
+                  "e": 8.1
+                },
+                {
+                  "w": "geet",
+                  "s": 8.1,
+                  "e": 8.9
+                },
+                {
+                  "w": "likhun",
+                  "s": 8.9,
+                  "e": 10.16
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": 10.16,
+          "end": 14.5,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "Tu",
+                  "s": 10.16,
+                  "e": 10.5
+                },
+                {
+                  "w": "aa",
+                  "s": 10.5,
+                  "e": 11.58
+                },
+                {
+                  "w": "baithe",
+                  "s": 11.58,
+                  "e": 12.24
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "mere",
+                  "s": 12.24,
+                  "e": 13.14
+                },
+                {
+                  "w": "shaane",
+                  "s": 13.14,
+                  "e": 14.32
+                },
+                {
+                  "w": "par",
+                  "s": 14.32,
+                  "e": 15.08
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "scene2": {
+      "start": 13.5,
+      "end": 22.0,
+      "line1": {
+        "text": "mere shaane par",
+        "start": 13.5,
+        "end": 15.5
       },
-      {
-        "start": 7,
-        "end": 13,
-        "line1": "dil yeh sambhalta nahi",
-        "line2": "tere bina sajna"
+      "line2": {
+        "text": "SAR RAKHE TU",
+        "start": 15.5,
+        "end": 18.0
+      },
+      "line3": {
+        "text": "main neend kahun",
+        "start": 18.0,
+        "end": 20.0
+      },
+      "line4": {
+        "text": "tu so jaaye",
+        "start": 20.0,
+        "end": 22.0
       }
-    ],
-    "completed_at": "2026-11-03T07:28:02.404Z",
-    "video_file": "ishq_aesthetic_9_16.mp4"
+    },
+    "scene3": {
+      "start": 22.0,
+      "end": 27.5,
+      "line1": "chalo ek aisi",
+      "line2": "NAZM KAHUN"
+    },
+    "scene4": {
+      "start": 27.5,
+      "end": 33.0,
+      "heroTitle": "ISHQ",
+      "subtitle": "jo lab se kahun, tu so jaaye...",
+      "pillBadge": "Faheem Abdullah · Ishq"
+    }
   },
   {
     "id": "tum_se",
     "title": "Tum Se",
     "artist": "Sachin-Jigar, Raghav Chaitanya · TBMAUJ",
     "search_query": "Tum Se Raghav Chaitanya Teri Baaton Mein official audio",
-    "chorus_start": "00:00:30.00",
+    "chorus_start": "00:01:07.50",
     "duration": 33,
     "hero_title": "TUM SE",
-    "symbolName": "butterfly",
-    "particleType": "fireflies",
+    "symbolName": "crescent_moon",
+    "particleType": "stardust",
     "palette": {
-      "gradientTop": "rgba(70, 25, 55, 0.95)",
-      "gradientMid": "#2d0e22",
-      "gradientDark": "#14050f",
-      "gradientBottom": "#060105",
-      "accentPink": "#ec4899",
-      "accentLight": "#fbcfe8",
-      "accentGlow": "#db2777"
+      "gradientTop": "rgba(20, 36, 68, 0.95)",
+      "gradientMid": "#0f1f3d",
+      "gradientDark": "#070e1e",
+      "gradientBottom": "#02040a",
+      "accentPink": "#38bdf8",
+      "accentLight": "#bae6fd",
+      "accentGlow": "#0284c7"
     },
-    "hook1": "tum se hi",
-    "hook2": "TUM SE HI",
-    "hook3": "mera jahaan",
+    "hook1": "tum se hi hai",
+    "hook2": "DIL KO MERE",
+    "hook3": "aaraam",
     "hook4": "tum se",
-    "drop_line1": "saari khushiyan",
-    "drop_line2": "TERE NAAM KIYIN",
-    "subtitle": "tum se hi din dhalta hai...",
-    "status": "completed",
-    "stanzas_text": [
-      {
-        "start": 0.5,
-        "end": 6.5,
-        "line1": "Tum se hi subah",
-        "line2": "tum se hi shaam meri"
+    "drop_line1": "tum se hi din dhalta hai",
+    "drop_line2": "TUM SE HI MERA JAHAAN",
+    "subtitle": "tum se kiran dhoop ki, tum se siyaah raat...",
+    "status": "pending",
+    "scene1": {
+      "duration": 13.5,
+      "stanzas": [
+        {
+          "start": 0.0,
+          "end": 4.8,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "Tum",
+                  "s": 0.06,
+                  "e": 0.76
+                },
+                {
+                  "w": "se",
+                  "s": 0.76,
+                  "e": 1.34
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "kiran",
+                  "s": 1.34,
+                  "e": 2.34
+                },
+                {
+                  "w": "dhoop",
+                  "s": 2.34,
+                  "e": 3.52
+                },
+                {
+                  "w": "ki",
+                  "s": 3.52,
+                  "e": 4.12
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": 4.8,
+          "end": 9.8,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "Tum",
+                  "s": 4.8,
+                  "e": 5.5
+                },
+                {
+                  "w": "se",
+                  "s": 5.5,
+                  "e": 6.02
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "siyaah",
+                  "s": 6.02,
+                  "e": 7.1
+                },
+                {
+                  "w": "raat",
+                  "s": 7.1,
+                  "e": 8.2
+                },
+                {
+                  "w": "hai",
+                  "s": 8.2,
+                  "e": 9.18
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": 9.8,
+          "end": 14.5,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "Tum",
+                  "s": 9.3,
+                  "e": 9.8
+                },
+                {
+                  "w": "se",
+                  "s": 9.8,
+                  "e": 10.2
+                },
+                {
+                  "w": "hi",
+                  "s": 10.2,
+                  "e": 10.7
+                },
+                {
+                  "w": "hai",
+                  "s": 10.7,
+                  "e": 11.3
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "dil",
+                  "s": 11.3,
+                  "e": 11.8
+                },
+                {
+                  "w": "ko",
+                  "s": 11.8,
+                  "e": 12.1
+                },
+                {
+                  "w": "mere",
+                  "s": 12.1,
+                  "e": 12.7
+                },
+                {
+                  "w": "aaraam",
+                  "s": 12.7,
+                  "e": 13.8
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "scene2": {
+      "start": 13.5,
+      "end": 22.0,
+      "line1": {
+        "text": "tum se hi hai",
+        "start": 13.5,
+        "end": 15.5
       },
-      {
-        "start": 7,
-        "end": 13,
-        "line1": "tum se hi dhadkan",
-        "line2": "dil ki har baat meri"
+      "line2": {
+        "text": "DIL KO MERE",
+        "start": 15.5,
+        "end": 18.0
+      },
+      "line3": {
+        "text": "aaraam",
+        "start": 18.0,
+        "end": 20.0
+      },
+      "line4": {
+        "text": "tum se",
+        "start": 20.0,
+        "end": 22.0
       }
-    ],
-    "completed_at": "2026-11-03T07:28:39.165Z",
-    "video_file": "tum_se_aesthetic_9_16.mp4"
+    },
+    "scene3": {
+      "start": 22.0,
+      "end": 27.5,
+      "line1": "tum se hi din dhalta hai",
+      "line2": "TUM SE HI MERA JAHAAN"
+    },
+    "scene4": {
+      "start": 27.5,
+      "end": 33.0,
+      "heroTitle": "TUM SE",
+      "subtitle": "tum se kiran dhoop ki, tum se siyaah raat...",
+      "pillBadge": "Raghav Chaitanya · Tum Se"
+    }
   },
   {
     "id": "apna_bana_le",
     "title": "Apna Bana Le",
     "artist": "Arijit Singh, Sachin-Jigar · Bhediya",
     "search_query": "Apna Bana Le Arijit Singh Bhediya official audio",
-    "chorus_start": "00:00:45.00",
+    "chorus_start": "00:01:09.20",
     "duration": 33,
     "hero_title": "APNA BANA LE",
-    "symbolName": "infinity_heart",
-    "particleType": "embers",
+    "symbolName": "rose",
+    "particleType": "petals",
     "palette": {
-      "gradientTop": "rgba(40, 24, 60, 0.95)",
-      "gradientMid": "#1a0e28",
-      "gradientDark": "#0c0513",
-      "gradientBottom": "#040107",
-      "accentPink": "#c084fc",
-      "accentLight": "#e9d5ff",
-      "accentGlow": "#9333ea"
+      "gradientTop": "rgba(82, 18, 48, 0.95)",
+      "gradientMid": "#28081a",
+      "gradientDark": "#12030d",
+      "gradientBottom": "#060105",
+      "accentPink": "#ff2a85",
+      "accentLight": "#ffa6d2",
+      "accentGlow": "#ff0055"
     },
     "hook1": "apna bana le",
-    "hook2": "APNA BANA LE",
-    "hook3": "piya mujhe",
-    "hook4": "apna",
-    "drop_line1": "chhod ke saara",
-    "drop_line2": "JAG TERE PEECHE",
-    "subtitle": "apna bana le piya...",
-    "status": "completed",
-    "stanzas_text": [
-      {
-        "start": 0.5,
-        "end": 6.5,
-        "line1": "Apna bana le piya",
-        "line2": "apna bana le mujhe"
+    "hook2": "PIYA",
+    "hook3": "dil ke nagar mein",
+    "hook4": "basaa le piya",
+    "drop_line1": "tu mera koi na",
+    "drop_line2": "HOKE BHI KUCH LAAGE",
+    "subtitle": "dil ke nagar mein ghar basaa le piya...",
+    "status": "pending",
+    "scene1": {
+      "duration": 13.5,
+      "stanzas": [
+        {
+          "start": 0.0,
+          "end": 4.5,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "Apna",
+                  "s": 0.08,
+                  "e": 1.2
+                },
+                {
+                  "w": "bana",
+                  "s": 1.2,
+                  "e": 1.66
+                },
+                {
+                  "w": "le",
+                  "s": 1.66,
+                  "e": 2.8
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "piya",
+                  "s": 2.8,
+                  "e": 3.8
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": 4.5,
+          "end": 9.5,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "Apna",
+                  "s": 4.52,
+                  "e": 4.9
+                },
+                {
+                  "w": "bana",
+                  "s": 4.9,
+                  "e": 5.46
+                },
+                {
+                  "w": "le",
+                  "s": 5.46,
+                  "e": 5.82
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "piya",
+                  "s": 5.82,
+                  "e": 6.66
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": 9.5,
+          "end": 14.5,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "Dil",
+                  "s": 6.66,
+                  "e": 7.22
+                },
+                {
+                  "w": "ke",
+                  "s": 7.22,
+                  "e": 7.52
+                },
+                {
+                  "w": "nagar",
+                  "s": 7.52,
+                  "e": 8.34
+                },
+                {
+                  "w": "mein",
+                  "s": 8.34,
+                  "e": 8.68
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "shahar",
+                  "s": 8.68,
+                  "e": 9.64
+                },
+                {
+                  "w": "tu",
+                  "s": 9.64,
+                  "e": 10.06
+                },
+                {
+                  "w": "basaa",
+                  "s": 10.06,
+                  "e": 10.76
+                },
+                {
+                  "w": "le",
+                  "s": 10.76,
+                  "e": 11.02
+                },
+                {
+                  "w": "piya",
+                  "s": 11.02,
+                  "e": 11.82
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "scene2": {
+      "start": 13.5,
+      "end": 22.0,
+      "line1": {
+        "text": "apna bana le",
+        "start": 13.5,
+        "end": 15.5
       },
-      {
-        "start": 7,
-        "end": 13,
-        "line1": "dil ke nagar mein",
-        "line2": "ghar basaa le piya"
+      "line2": {
+        "text": "PIYA",
+        "start": 15.5,
+        "end": 18.0
+      },
+      "line3": {
+        "text": "dil ke nagar mein",
+        "start": 18.0,
+        "end": 20.0
+      },
+      "line4": {
+        "text": "basaa le piya",
+        "start": 20.0,
+        "end": 22.0
       }
-    ],
-    "completed_at": "2026-11-03T07:29:16.109Z",
-    "video_file": "apna_bana_le_aesthetic_9_16.mp4"
+    },
+    "scene3": {
+      "start": 22.0,
+      "end": 27.5,
+      "line1": "tu mera koi na",
+      "line2": "HOKE BHI KUCH LAAGE"
+    },
+    "scene4": {
+      "start": 27.5,
+      "end": 33.0,
+      "heroTitle": "APNA BANA LE",
+      "subtitle": "dil ke nagar mein ghar basaa le piya...",
+      "pillBadge": "Arijit Singh · Apna Bana Le"
+    }
   },
   {
     "id": "kesariya",
     "title": "Kesariya",
     "artist": "Arijit Singh, Pritam · Brahmastra",
     "search_query": "Kesariya Arijit Singh Brahmastra official audio",
-    "chorus_start": "00:00:48.00",
+    "chorus_start": "00:01:09.40",
     "duration": 33,
     "hero_title": "KESARIYA",
-    "symbolName": "lotus",
+    "symbolName": "infinity_heart",
     "particleType": "embers",
     "palette": {
-      "gradientTop": "rgba(85, 38, 12, 0.95)",
-      "gradientMid": "#381704",
-      "gradientDark": "#1a0901",
-      "gradientBottom": "#080300",
-      "accentPink": "#fbbf24",
-      "accentLight": "#fef08a",
-      "accentGlow": "#f59e0b"
+      "gradientTop": "rgba(95, 35, 15, 0.95)",
+      "gradientMid": "#361405",
+      "gradientDark": "#180902",
+      "gradientBottom": "#080301",
+      "accentPink": "#fb923c",
+      "accentLight": "#fed7aa",
+      "accentGlow": "#ea580c"
     },
-    "hook1": "kesariya tera",
-    "hook2": "ISHQ HAI PIYA",
-    "hook3": "rang jaaun",
+    "hook1": "rain saari",
+    "hook2": "TERI KHAIR",
+    "hook3": "manaun",
     "hook4": "kesariya",
-    "drop_line1": "beete saare din",
-    "drop_line2": "TERI FIKRAAN MEIN",
-    "subtitle": "kesariya tera ishq hai piya...",
-    "status": "completed",
-    "stanzas_text": [
-      {
-        "start": 0.5,
-        "end": 6.5,
-        "line1": "Kesariya tera",
-        "line2": "ishq hai piya"
+    "drop_line1": "kesariya tera",
+    "drop_line2": "ISHQ HAI PIYA",
+    "subtitle": "rang jaaun jo main haath lagaun...",
+    "status": "pending",
+    "scene1": {
+      "duration": 13.5,
+      "stanzas": [
+        {
+          "start": 0.0,
+          "end": 5.5,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "Kesariya",
+                  "s": 0.06,
+                  "e": 1.46
+                },
+                {
+                  "w": "tera",
+                  "s": 1.46,
+                  "e": 1.96
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "ishq",
+                  "s": 1.96,
+                  "e": 2.92
+                },
+                {
+                  "w": "hai",
+                  "s": 2.92,
+                  "e": 3.18
+                },
+                {
+                  "w": "piya",
+                  "s": 3.18,
+                  "e": 4.04
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": 5.3,
+          "end": 9.5,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "Rang",
+                  "s": 5.38,
+                  "e": 5.58
+                },
+                {
+                  "w": "jaaun",
+                  "s": 5.58,
+                  "e": 6.56
+                },
+                {
+                  "w": "jo",
+                  "s": 6.56,
+                  "e": 6.82
+                },
+                {
+                  "w": "main",
+                  "s": 6.82,
+                  "e": 7.42
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "haath",
+                  "s": 7.42,
+                  "e": 8.16
+                },
+                {
+                  "w": "lagaun",
+                  "s": 8.16,
+                  "e": 9.2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": 9.5,
+          "end": 14.0,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "Din",
+                  "s": 9.52,
+                  "e": 9.68
+                },
+                {
+                  "w": "beete",
+                  "s": 9.68,
+                  "e": 10.26
+                },
+                {
+                  "w": "saare",
+                  "s": 10.26,
+                  "e": 10.94
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "teri",
+                  "s": 10.94,
+                  "e": 11.76
+                },
+                {
+                  "w": "fikraan",
+                  "s": 11.76,
+                  "e": 12.42
+                },
+                {
+                  "w": "mein",
+                  "s": 12.42,
+                  "e": 13.48
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "scene2": {
+      "start": 13.5,
+      "end": 22.0,
+      "line1": {
+        "text": "rain saari",
+        "start": 13.5,
+        "end": 15.5
       },
-      {
-        "start": 7,
-        "end": 13,
-        "line1": "rang jaaun jo main",
-        "line2": "haath lagaun tujhe"
+      "line2": {
+        "text": "TERI KHAIR",
+        "start": 15.5,
+        "end": 18.0
+      },
+      "line3": {
+        "text": "manaun",
+        "start": 18.0,
+        "end": 20.0
+      },
+      "line4": {
+        "text": "kesariya",
+        "start": 20.0,
+        "end": 22.0
       }
-    ],
-    "completed_at": "2026-11-03T07:29:54.632Z",
-    "video_file": "kesariya_aesthetic_9_16.mp4"
+    },
+    "scene3": {
+      "start": 22.0,
+      "end": 27.5,
+      "line1": "kesariya tera",
+      "line2": "ISHQ HAI PIYA"
+    },
+    "scene4": {
+      "start": 27.5,
+      "end": 33.0,
+      "heroTitle": "KESARIYA",
+      "subtitle": "rang jaaun jo main haath lagaun...",
+      "pillBadge": "Arijit Singh, Pritam · Kesariya"
+    }
   }
 ]
