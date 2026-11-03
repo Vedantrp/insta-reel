@@ -143,7 +143,7 @@
     "drop_line1": "lakh lakh nakhre",
     "drop_line2": "TERA NAADAAN",
     "subtitle": "husn tera tauba tauba...",
-    "status": "pending",
+    "status": "completed",
     "stanzas_text": [
       {
         "start": 0.5,
@@ -152,12 +152,14 @@
         "line2": "husn tera tauba tauba"
       },
       {
-        "start": 7.0,
-        "end": 13.0,
+        "start": 7,
+        "end": 13,
         "line1": "chal teri tauba tauba",
         "line2": "lakh lakh nakhre tera"
       }
-    ]
+    ],
+    "completed_at": "2026-11-03T07:02:15.740Z",
+    "video_file": "tauba_tauba_aesthetic_9_16.mp4"
   },
   {
     "id": "soulmate",
@@ -185,7 +187,7 @@
     "drop_line1": "tujhe chahta hoon",
     "drop_line2": "BEPANAAH",
     "subtitle": "tu ban ja mera soulmate...",
-    "status": "pending",
+    "status": "completed",
     "stanzas_text": [
       {
         "start": 0.5,
@@ -194,12 +196,14 @@
         "line2": "soulmate meri jaan"
       },
       {
-        "start": 7.0,
-        "end": 13.0,
+        "start": 7,
+        "end": 13,
         "line1": "tujhe chahta hoon",
         "line2": "bepanaah har ghadi"
       }
-    ]
+    ],
+    "completed_at": "2026-11-03T07:03:03.832Z",
+    "video_file": "soulmate_aesthetic_9_16.mp4"
   },
   {
     "id": "ve_kamleya",
@@ -227,7 +231,7 @@
     "drop_line1": "kyun jaave tu",
     "drop_line2": "USKE PEECHE",
     "subtitle": "ve kamleya mere naadaan dil...",
-    "status": "pending",
+    "status": "completed",
     "stanzas_text": [
       {
         "start": 0.5,
@@ -236,12 +240,14 @@
         "line2": "mere naadaan dil ve"
       },
       {
-        "start": 7.0,
-        "end": 13.0,
+        "start": 7,
+        "end": 13,
         "line1": "kyun rooth jaave tu",
         "line2": "ishq de raahon pe"
       }
-    ]
+    ],
+    "completed_at": "2026-11-03T07:03:51.523Z",
+    "video_file": "ve_kamleya_aesthetic_9_16.mp4"
   },
   {
     "id": "jo_tum_mere_ho",
@@ -269,7 +275,7 @@
     "drop_line1": "kya darr phir",
     "drop_line2": "IS JAHAAN KA",
     "subtitle": "jo tum mere ho...",
-    "status": "pending",
+    "status": "completed",
     "stanzas_text": [
       {
         "start": 0.5,
@@ -278,12 +284,14 @@
         "line2": "toh kya darr phir"
       },
       {
-        "start": 7.0,
-        "end": 13.0,
+        "start": 7,
+        "end": 13,
         "line1": "meri har ek duaa",
         "line2": "tera hi naam le"
       }
-    ]
+    ],
+    "completed_at": "2026-11-03T07:04:37.302Z",
+    "video_file": "jo_tum_mere_ho_aesthetic_9_16.mp4"
   },
   {
     "id": "pehle_bhi_main",
@@ -311,7 +319,7 @@
     "drop_line1": "tune chhua toh",
     "drop_line2": "SAANSEIN RUK GAYIN",
     "subtitle": "pehle bhi main tumse mila hoon...",
-    "status": "pending",
+    "status": "completed",
     "stanzas_text": [
       {
         "start": 0.5,
@@ -320,12 +328,14 @@
         "line2": "tumse mila hoon"
       },
       {
-        "start": 7.0,
-        "end": 13.0,
+        "start": 7,
+        "end": 13,
         "line1": "pehli dafa hi",
         "line2": "milke aisa laga"
       }
-    ]
+    ],
+    "completed_at": "2026-11-03T07:05:24.790Z",
+    "video_file": "pehle_bhi_main_aesthetic_9_16.mp4"
   },
   {
     "id": "satranga",
@@ -362,8 +372,8 @@
         "line2": "tu hi manjil meri"
       },
       {
-        "start": 7.0,
-        "end": 13.0,
+        "start": 7,
+        "end": 13,
         "line1": "satranga ban ja tu",
         "line2": "mere ishq da rang"
       }
@@ -404,8 +414,8 @@
         "line2": "jaan se pyaara ve"
       },
       {
-        "start": 7.0,
-        "end": 13.0,
+        "start": 7,
+        "end": 13,
         "line1": "dil yeh sambhalta nahi",
         "line2": "tere bina sajna"
       }
@@ -446,8 +456,8 @@
         "line2": "tum se hi shaam meri"
       },
       {
-        "start": 7.0,
-        "end": 13.0,
+        "start": 7,
+        "end": 13,
         "line1": "tum se hi dhadkan",
         "line2": "dil ki har baat meri"
       }
@@ -488,8 +498,8 @@
         "line2": "apna bana le mujhe"
       },
       {
-        "start": 7.0,
-        "end": 13.0,
+        "start": 7,
+        "end": 13,
         "line1": "dil ke nagar mein",
         "line2": "ghar basaa le piya"
       }
@@ -530,8 +540,8 @@
         "line2": "ishq hai piya"
       },
       {
-        "start": 7.0,
-        "end": 13.0,
+        "start": 7,
+        "end": 13,
         "line1": "rang jaaun jo main",
         "line2": "haath lagaun tujhe"
       }
