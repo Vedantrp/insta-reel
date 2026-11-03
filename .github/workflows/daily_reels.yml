@@ -122,7 +122,23 @@ jobs:
           # Check if there are changes to commit
           if ! git diff --cached --quiet; then
             git commit -m "Auto: Update completed songs queue [skip ci]"
-            git push origin HEAD
+            # Fetch latest origin/main and rebase so non-fast-forward push never fails
+            for i in 1 2 3 4 5; do
+              echo "[*] Attempting to sync with origin/main (attempt $i)..."
+              if git pull --rebase origin main; then
+                if git push origin HEAD:main; then
+                  echo "[+] Successfully pushed updated song queue to origin/main!"
+                  break
+                fi
+              else
+                echo "[!] Rebase conflict encountered, taking current runner state..."
+                git checkout --ours songs_queue.json || true
+                git add songs_queue.json
+                GIT_EDITOR=true git rebase --continue || true
+                git push origin HEAD:main && break || true
+              fi
+              sleep 3
+            done
           else
             echo "[*] No queue changes to commit."
           fi
