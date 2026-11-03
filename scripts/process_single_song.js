@@ -37,10 +37,10 @@ async function processSong(song, outputDir = 'output') {
   const finalOutputMp4 = path.resolve(path.join(outputDir, `${songId}_aesthetic_9_16.mp4`));
 
   try {
-    // 1. Download official audio via yt-dlp
-    const searchQuery = song.search_query || `${song.title} ${song.artist} official audio`;
-    const ytdlpCmd = `yt-dlp -x --audio-format mp3 -o "${fullAudioPath}" "ytsearch1:${searchQuery.replace(/"/g, '')}"`;
-    run(ytdlpCmd, `Downloading Audio: ${searchQuery}`);
+    // 1. Download official audio via multi-tier downloader (bypasses bot-detection)
+    const searchQuery = song.search_query || `${song.title} ${song.artist}`;
+    const audioCmd = `python scripts/fetch_audio.py "${searchQuery.replace(/"/g, '')}" "${fullAudioPath}"`;
+    run(audioCmd, `Downloading Audio: ${searchQuery}`);
 
     // 2. Cut chorus segment (default 33.00s)
     const startTime = song.chorus_start || '00:00:40.00';
