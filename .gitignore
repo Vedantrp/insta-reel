@@ -1,0 +1,64 @@
+# Node & Python
+node_modules/
+__pycache__/
+*.pyc
+
+# Chrome temporary dirs
+.chrome-*
+chrome-*-render-*/
+
+# Temporary audio & video
+*.wav
+*.mp3
+*.mp4
+*.ppm
+!assets/
+chunks/
+
+# Generated outputs (GitHub Actions stores them in Artifacts and Releases)
+output/
+
+# Temporary files & logs
+*.tmp
+*.log
+
+# Temporary exploratory root files
+aesthetic_panel*.jpg
+test_*.js
+test_*.py
+render_*.js
+transcribe_*.py
+transcribe.py
+parse_lyrics.py
+build_alignment.py
+check_*.py
+cut_*.py
+fetch_cover.py
+generate_*.py
+read_whisper.py
+scan_*.py
+debug_*.js
+alignment*.json
+whisper*.json
+akhiyaan_*.json
+test_rendered_*.jpg
+test_frame_*.jpg
+preview_*.jpg
+preview_frame.jpg
+contact_sheet*.jpg
+frame_check_*.jpg
+final_check_*.jpg
+sajni_check*.jpg
+husn_scene*_check.jpg
+o_maahi_*.jpg
+o_maahi_*.json
+sajni_scene*.jpg
+rendered_check_sheet.jpg
+
+# Temporary exploratory folders
+aesthetic_engine/
+aesthetic_engine_o_maahi/
+scenes/
+scenes_jaana/
+.claude/
+

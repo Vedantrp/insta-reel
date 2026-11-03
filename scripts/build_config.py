@@ -1,0 +1,127 @@
+#!/usr/bin/env python3
+import sys, os, json
+
+def build_reel_config(meta_file, words_file, out_config_file="reel_config.json"):
+    with open(meta_file, "r", encoding="utf-8") as f:
+        meta = json.load(f)
+
+    words_data = {"words": []}
+    if os.path.exists(words_file):
+        with open(words_file, "r", encoding="utf-8") as f:
+            words_data = json.load(f)
+
+    all_words = words_data.get("words", [])
+
+    # If custom scene config is already provided in meta, merge it
+    custom_s1 = meta.get("scene1")
+    custom_s2 = meta.get("scene2")
+    custom_s3 = meta.get("scene3")
+    custom_s4 = meta.get("scene4")
+
+    # 1. Scene 1 Stanzas generation (0s to ~13.5s)
+    # Filter words occurring in the first 13.5s
+    s1_words = [w for w in all_words if w["start"] < 13.5]
+    
+    stanzas = []
+    if custom_s1 and "stanzas" in custom_s1:
+        stanzas = custom_s1["stanzas"]
+    elif len(s1_words) > 0:
+        # Group into stanzas of max 6 words (broken into 2 sublines of ~3 words each)
+        chunk_size = 6
+        for i in range(0, len(s1_words), chunk_size):
+            chunk = s1_words[i:i + chunk_size]
+            subline1_words = chunk[:len(chunk)//2 + (len(chunk)%2)]
+            subline2_words = chunk[len(chunk)//2 + (len(chunk)%2):]
+            
+            lines = []
+            if subline1_words:
+                lines.append({"words": [{"w": w["word"], "s": w["start"], "e": w["end"]} for w in subline1_words]})
+            if subline2_words:
+                lines.append({"words": [{"w": w["word"], "s": w["start"], "e": w["end"]} for w in subline2_words]})
+
+            stanza_start = chunk[0]["start"]
+            stanza_end = chunk[-1]["end"]
+            stanzas.append({
+                "start": stanza_start,
+                "end": stanza_end,
+                "lines": lines
+            })
+    else:
+        # Fallback dummy stanza
+        stanzas = [
+            {
+                "start": 0.0,
+                "end": 13.0,
+                "lines": [
+                    { "words": [{ "w": meta.get("title", "Song"), "s": 0.5, "e": 3.0 }] }
+                ]
+            }
+        ]
+
+    # 2. Scene 2 (Neon Rose + 4-Tier Editorial Lockup) (13.5s -> 22.0s)
+    s2 = custom_s2 or {}
+    if not s2:
+        title_lower = meta.get("title", "Song").lower()
+        title_upper = meta.get("title", "SONG").upper()
+        s2 = {
+            "start": 13.5,
+            "end": 22.0,
+            "line1": { "text": meta.get("hook1", title_lower), "start": 13.5, "end": 15.5 },
+            "line2": { "text": meta.get("hook2", title_upper), "start": 15.5, "end": 18.0 },
+            "line3": { "text": meta.get("hook3", title_lower), "start": 18.0, "end": 20.0 },
+            "line4": { "text": meta.get("hook4", title_lower), "start": 20.0, "end": 22.5 }
+        }
+
+    # 3. Scene 3 (Kinetic Drop) (22.0s -> 27.5s)
+    s3 = custom_s3 or {
+        "start": 22.0,
+        "end": 27.5,
+        "line1": meta.get("drop_line1", "meri wafa pe"),
+        "line2": meta.get("drop_line2", "HAQ HUA TERA")
+    }
+
+    # 4. Scene 4 (3D Chrome Hero Title & Spotify Capsule) (27.5s -> 33.0s)
+    s4 = custom_s4 or {
+        "start": 27.5,
+        "end": 33.0,
+        "heroTitle": meta.get("hero_title", meta.get("title", "HERO TITLE")).upper(),
+        "subtitle": meta.get("subtitle", f"{meta.get('title', '')} · {meta.get('artist', '')}"),
+        "pillBadge": f"{meta.get('artist', 'Artist')} · {meta.get('title', 'Song')}"
+    }
+
+    config = {
+        "title": meta.get("title", "Song Title"),
+        "artist": meta.get("artist", "Artist"),
+        "albumCover": meta.get("albumCover", "album_cover.jpg"),
+        "symbolName": meta.get("symbolName", "butterfly"),
+        "particleType": meta.get("particleType", "fireflies"),
+        "palette": meta.get("palette", {
+            "gradientTop": "rgba(82, 18, 48, 0.95)",
+            "gradientMid": "#28081a",
+            "gradientDark": "#12030d",
+            "gradientBottom": "#060105",
+            "accentPink": "#ff2a85",
+            "accentLight": "#ffa6d2",
+            "accentGlow": "#ff0055"
+        }),
+        "scene1": {
+            "duration": 13.5,
+            "stanzas": stanzas
+        },
+        "scene2": s2,
+        "scene3": s3,
+        "scene4": s4
+    }
+
+    with open(out_config_file, "w", encoding="utf-8") as f:
+        json.dump(config, f, indent=2, ensure_ascii=False)
+
+    print(f"[+] Reel config generated: {out_config_file}")
+    return config
+
+if __name__ == "__main__":
+    m = sys.argv[1] if len(sys.argv) > 1 else "song_meta.json"
+    w = sys.argv[2] if len(sys.argv) > 2 else "words.json"
+    out = sys.argv[3] if len(sys.argv) > 3 else "reel_config.json"
+    build_reel_config(m, w, out)
+

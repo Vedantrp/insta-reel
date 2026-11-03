@@ -1,0 +1,20 @@
+{
+  "name": "aesthetic-lyrics-automation",
+  "version": "1.0.0",
+  "description": "Autonomous 1080x1920 9:16 Lyric Reels Generator on GitHub Actions",
+  "main": "scripts/daily_batch.js",
+  "scripts": {
+    "start": "node scripts/daily_batch.js --count 5",
+    "generate-one": "node scripts/daily_batch.js --count 1"
+  },
+  "keywords": [
+    "motion-graphics",
+    "lyrics-video",
+    "canvas",
+    "automation",
+    "github-actions"
+  ],
+  "author": "",
+  "license": "MIT"
+}
+

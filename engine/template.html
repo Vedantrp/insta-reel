@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aesthetic Dynamic Motion Graphic Lyric Engine</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@1,500;1,700&family=Syne:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #080206;
+    }
+
+    #viewport {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1080px;
+      height: 1920px;
+      box-shadow: 0 10px 50px rgba(0, 0, 0, 0.8);
+      background-color: #0c0208;
+    }
+
+    canvas {
+      display: block;
+      width: 1080px;
+      height: 1920px;
+    }
+  </style>
+</head>
+<body>
+  <div id="viewport">
+    <canvas id="mainCanvas" width="1080" height="1920"></canvas>
+  </div>
+
+  <script src="../assets/particles.js"></script>
+  <script src="../assets/vector_motifs.js"></script>
+  <script>
+    const canvas = document.getElementById('mainCanvas');
+    const ctx = canvas.getContext('2d');
+
+    let CONFIG = null;
+    let particleSystem = null;
+    let albumImg = new Image();
+    let isAlbumLoaded = false;
+    let isInitialized = false;
+
+    const spotifySvgPath = new Path2D("M12 2C6.477 2 2 6.477 2 12c0 5.524 4.477 10 10 10s10-4.476 10-10c0-5.523-4.477-10-10-10zm4.586 14.424a.625.625 0 01-.86.208c-2.355-1.439-5.32-1.764-8.813-.966a.625.625 0 11-.277-1.219c3.824-.874 7.09-.508 9.742 1.117a.625.625 0 01.208.86zm1.226-2.723a.782.782 0 01-1.077.257c-2.695-1.657-6.804-2.136-9.992-1.168a.782.782 0 01-.456-1.496c3.642-1.106 8.18-.574 11.268 1.33a.781.781 0 01.257 1.077zm.106-2.835C14.69 8.94 9.37 8.767 6.282 9.704a.937.937 0 11-.542-1.792c3.551-1.078 9.429-.877 13.176 1.346a.938.938 0 01-1.002 1.608z");
+
+    window.initEngine = async function(injectedConfig) {
+      if (isInitialized) return true;
+
+      // 1. Load config
+      if (injectedConfig) {
+        CONFIG = injectedConfig;
+      } else if (window.REEL_CONFIG) {
+        CONFIG = window.REEL_CONFIG;
+      } else {
+        try {
+          const resp = await fetch('reel_config.json');
+          CONFIG = await resp.json();
+        } catch (e) {
+          console.error('[!] Failed to fetch reel_config.json:', e);
+          return false;
+        }
+      }
+
+      // 2. Preload album artwork
+      await new Promise((resolve) => {
+        albumImg.onload = () => {
+          isAlbumLoaded = true;
+          resolve();
+        };
+        albumImg.onerror = () => {
+          console.warn('[!] Failed to load album cover, using gradient fallback');
+          resolve();
+        };
+        albumImg.src = CONFIG.albumCover || 'album_cover.jpg';
+      });
+
+      // 3. Preload web fonts
+      if (document.fonts) {
+        try {
+          await Promise.all([
+            document.fonts.load('700 38px "Montserrat"'),
+            document.fonts.load('italic 500 48px "Playfair Display"'),
+            document.fonts.load('800 64px "Syne"'),
+            document.fonts.load('125px "Great Vibes"'),
+            document.fonts.load('600 26px "Plus Jakarta Sans"')
+          ]);
+        } catch (e) {
+          console.warn('Font loading notice:', e);
+        }
+      }
+
+      // 4. Initialize Thematic Particle Atmosphere System
+      const pType = CONFIG.particleType || 'fireflies';
+      const accentColor = (CONFIG.palette && CONFIG.palette.accentPink) || '#ff2a85';
+      particleSystem = new AtmosphericParticleSystem(1080, 1920, pType, 48, accentColor);
+
+      isInitialized = true;
+      return true;
+    };
+
+    /**
+     * Master frame renderer
+     */
+    window.renderFrameAt = function(time) {
+      if (!isInitialized || !CONFIG) return false;
+
+      ctx.clearRect(0, 0, 1080, 1920);
+
+      // 1. Atmosphere base background
+      renderAtmosphericBackground(ctx, time);
+
+      // 2. Main Scenic Storyboard Transitions
+      const s1End = CONFIG.scene1.duration || 13.50;
+      const s2End = CONFIG.scene2.end || 22.00;
+      const s3End = CONFIG.scene3.end || 27.50;
+
+      // Scene 1: Spotify 3D Card
+      if (time < s1End + 1.0) {
+        let alpha = 1.0;
+        if (time > s1End - 0.5) alpha = Math.max(0, 1.0 - (time - (s1End - 0.5)) / 0.5);
+        if (alpha > 0) renderScene1_SpotifyCard(ctx, time, alpha);
+      }
+
+      // Scene 2: Thematic Neon Symbol + Editorial 4-Tier
+      if (time >= s1End - 0.5 && time < s2End + 1.0) {
+        let alpha = 1.0;
+        if (time < s1End + 0.5) alpha = (time - (s1End - 0.5)) / 1.0;
+        else if (time > s2End - 0.5) alpha = Math.max(0, 1.0 - (time - (s2End - 0.5)) / 0.5);
+        if (alpha > 0) renderScene2_NeonRose(ctx, time, alpha);
+      }
+
+      // Scene 3: Kinetic Drop
+      if (time >= s2End - 0.5 && time < s3End + 1.0) {
+        let alpha = 1.0;
+        if (time < s2End + 0.5) alpha = (time - (s2End - 0.5)) / 1.0;
+        else if (time > s3End - 0.5) alpha = Math.max(0, 1.0 - (time - (s3End - 0.5)) / 0.5);
+        if (alpha > 0) renderScene3_KineticDrop(ctx, time, alpha);
+      }
+
+      // Scene 4: 3D Chrome Hero Title
+      if (time >= s3End - 0.5) {
+        let alpha = 1.0;
+        if (time < s3End + 0.5) alpha = (time - (s3End - 0.5)) / 1.0;
+        if (alpha > 0) renderScene4_ChromeHero(ctx, time, alpha);
+      }
+
+      // 3. Falling Dynamic Atmospheric Particles
+      if (particleSystem) {
+        particleSystem.update(1 / 24, 0);
+        particleSystem.render(ctx, time);
+      }
+
+      // 4. Lens vignette & film grain
+      renderLensVignette(ctx);
+
+      return true;
+    };
+
+    function renderAtmosphericBackground(ctx, time) {
+      const pulse = 0.5 + 0.5 * Math.sin(time * 2.8);
+      const bgGrad = ctx.createRadialGradient(
+        540, 960 + Math.sin(time * 0.5) * 50, 150,
+        540, 960, 1100
+      );
+
+      const p = CONFIG.palette || {};
+      const topColor = p.gradientTop || 'rgba(82, 18, 48, 0.95)';
+      const midColor = p.gradientMid || '#28081a';
+      const darkColor = p.gradientDark || '#12030d';
+      const bottomColor = p.gradientBottom || '#060105';
+
+      bgGrad.addColorStop(0, topColor);
+      bgGrad.addColorStop(0.45, midColor);
+      bgGrad.addColorStop(0.80, darkColor);
+      bgGrad.addColorStop(1.0, bottomColor);
+
+      ctx.fillStyle = bgGrad;
+      ctx.fillRect(0, 0, 1080, 1920);
+
+      // Bokeh orbs
+      const orbs = [
+        { x: 300, y: 550, r: 240, color: 'rgba(255, 60, 120, 0.08)' },
+        { x: 780, y: 1350, r: 280, color: 'rgba(255, 90, 140, 0.07)' },
+        { x: 540, y: 920, r: 350, color: 'rgba(200, 20, 90, 0.10)' }
+      ];
+      for (let orb of orbs) {
+        const og = ctx.createRadialGradient(orb.x, orb.y, 0, orb.x, orb.y, orb.r);
+        og.addColorStop(0, orb.color);
+        og.addColorStop(1, 'rgba(0, 0, 0, 0)');
+        ctx.fillStyle = og;
+        ctx.beginPath();
+        ctx.arc(orb.x, orb.y, orb.r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function renderScene1_SpotifyCard(ctx, time, sceneAlpha) {
+      ctx.save();
+      ctx.globalAlpha = sceneAlpha;
+
+      const centerX = 540;
+      const centerY = 960;
+
+      ctx.translate(centerX, centerY);
+      ctx.rotate(0.04);
+      ctx.transform(1.0, 0.08, -0.14, 0.94, 0, 0);
+
+      const cardW = 860;
+      const cardH = 1120;
+      const cardX = -cardW / 2;
+      const cardY = -cardH / 2;
+
+      // Drop shadow
+      ctx.save();
+      ctx.shadowColor = 'rgba(0, 0, 0, 0.85)';
+      ctx.shadowBlur = 65;
+      ctx.shadowOffsetY = 40;
+      ctx.fillStyle = 'rgba(22, 5, 16, 0.82)';
+      roundRect(ctx, cardX, cardY, cardW, cardH, 44);
+      ctx.fill();
+      ctx.restore();
+
+      // Card body
+      const cardGrad = ctx.createLinearGradient(cardX, cardY, cardX + cardW, cardY + cardH);
+      cardGrad.addColorStop(0, 'rgba(68, 18, 48, 0.75)');
+      cardGrad.addColorStop(0.5, 'rgba(34, 8, 24, 0.84)');
+      cardGrad.addColorStop(1, 'rgba(18, 4, 13, 0.92)');
+
+      ctx.save();
+      roundRect(ctx, cardX, cardY, cardW, cardH, 44);
+      ctx.fillStyle = cardGrad;
+      ctx.fill();
+
+      // Border reflection
+      const borderGrad = ctx.createLinearGradient(cardX, cardY, cardX + cardW, cardY + cardH);
+      borderGrad.addColorStop(0, 'rgba(255, 255, 255, 0.45)');
+      borderGrad.addColorStop(0.25, 'rgba(255, 140, 190, 0.35)');
+      borderGrad.addColorStop(0.7, 'rgba(255, 255, 255, 0.06)');
+      borderGrad.addColorStop(1, 'rgba(255, 255, 255, 0.18)');
+      ctx.strokeStyle = borderGrad;
+      ctx.lineWidth = 2.5;
+      ctx.stroke();
+      ctx.restore();
+
+      // Header
+      const topPadY = cardY + 65;
+      const thumbSize = 100;
+      const thumbX = cardX + 65;
+      const thumbY = topPadY;
+
+      ctx.save();
+      roundRect(ctx, thumbX, thumbY, thumbSize, thumbSize, 18);
+      ctx.clip();
+      if (isAlbumLoaded) {
+        ctx.drawImage(albumImg, thumbX, thumbY, thumbSize, thumbSize);
+      } else {
+        ctx.fillStyle = '#ff2a85';
+        ctx.fillRect(thumbX, thumbY, thumbSize, thumbSize);
+      }
+      ctx.restore();
+
+      // Title & Artist
+      ctx.save();
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '700 38px "Montserrat", sans-serif';
+      ctx.fillText(CONFIG.title || 'Song Title', thumbX + thumbSize + 25, thumbY + 45);
+
+      ctx.fillStyle = 'rgba(255, 205, 225, 0.74)';
+      ctx.font = '500 26px "Plus Jakarta Sans", sans-serif';
+      ctx.fillText(CONFIG.artist || 'Artist', thumbX + thumbSize + 25, thumbY + 85);
+
+      // Spotify icon
+      ctx.translate(cardX + cardW - 105, thumbY + 12);
+      ctx.scale(3.2, 3.2);
+      ctx.fillStyle = '#1ed760';
+      ctx.fill(spotifySvgPath);
+      ctx.restore();
+
+      // Divider
+      ctx.save();
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(cardX + 60, topPadY + thumbSize + 40);
+      ctx.lineTo(cardX + cardW - 60, topPadY + thumbSize + 40);
+      ctx.stroke();
+      ctx.restore();
+
+      // Lyrics with Word-by-Word Highlight
+      const leftPad = 80;
+      const textStartX = cardX + leftPad;
+      let currentY = cardY + 295;
+      const subLineSpacing = 54;
+      const stanzaSpacing = 42;
+
+      const stanzas = (CONFIG.scene1 && CONFIG.scene1.stanzas) || [];
+
+      stanzas.forEach((stanza) => {
+        const isStanzaActive = time >= stanza.start && time < stanza.end;
+
+        stanza.lines.forEach((subLine) => {
+          ctx.save();
+          ctx.font = '700 38px "Montserrat", sans-serif';
+
+          let curX = textStartX;
+          const spaceW = ctx.measureText(' ').width;
+
+          subLine.words.forEach(wordObj => {
+            const isWordActive = time >= wordObj.s && time < wordObj.e;
+            const isWordPassed = time >= wordObj.e;
+            const wordW = ctx.measureText(wordObj.w).width;
+
+            if (isWordActive) {
+              ctx.save();
+              ctx.shadowColor = '#ff2a85';
+              ctx.shadowBlur = 24;
+              ctx.fillStyle = '#ffffff';
+              ctx.fillText(wordObj.w, curX, currentY);
+
+              const sweepProg = (time - wordObj.s) / Math.max(0.01, wordObj.e - wordObj.s);
+              const sweepGrad = ctx.createLinearGradient(curX, currentY - 30, curX + wordW, currentY);
+              sweepGrad.addColorStop(0, '#ffffff');
+              sweepGrad.addColorStop(Math.min(1.0, sweepProg), '#ff85b8');
+              sweepGrad.addColorStop(1, '#ffffff');
+              ctx.fillStyle = sweepGrad;
+              ctx.fillText(wordObj.w, curX, currentY);
+              ctx.restore();
+            } else if (isWordPassed || (isStanzaActive && !isWordActive && time > wordObj.e)) {
+              ctx.fillStyle = isStanzaActive ? 'rgba(255, 255, 255, 0.95)' : 'rgba(255, 190, 220, 0.52)';
+              ctx.fillText(wordObj.w, curX, currentY);
+            } else {
+              ctx.fillStyle = isStanzaActive ? 'rgba(255, 255, 255, 0.50)' : 'rgba(255, 190, 220, 0.28)';
+              ctx.fillText(wordObj.w, curX, currentY);
+            }
+
+            curX += wordW + spaceW;
+          });
+
+          ctx.restore();
+          currentY += subLineSpacing;
+        });
+
+        currentY += stanzaSpacing;
+      });
+
+      ctx.restore();
+    }
+
+    function renderScene2_NeonRose(ctx, time, sceneAlpha) {
+      ctx.save();
+      ctx.globalAlpha = sceneAlpha;
+
+      const beatFreq = 2.4;
+      const pulse = Math.pow(Math.max(0, Math.sin(time * Math.PI * beatFreq)), 3);
+
+      const roseX = 180;
+      const roseY = 960;
+      drawNeonRose(ctx, roseX, roseY, 1.35, 1.0, pulse);
+
+      const textStartX = 390;
+      const baseY = 820;
+      const s2 = CONFIG.scene2 || {};
+
+      // Line 1: Serif Italic
+      const l1 = s2.line1 || { text: 'line 1', start: 13.5, end: 15.5 };
+      const isL1Active = (time >= l1.start && time < l1.end);
+      ctx.save();
+      ctx.fillStyle = isL1Active ? '#ffffff' : '#ffdbe8';
+      ctx.font = 'italic 500 46px "Playfair Display", serif';
+      if (isL1Active) {
+        ctx.shadowColor = '#ff2a85';
+        ctx.shadowBlur = 18;
+      }
+      ctx.fillText(l1.text, textStartX, baseY);
+      ctx.restore();
+
+      // Line 2: Bold Grotesque Syne Uppercase
+      const l2 = s2.line2 || { text: 'LINE 2', start: 15.5, end: 18.0 };
+      const isL2Active = (time >= l2.start && time < l2.end);
+      ctx.save();
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '800 64px "Syne", sans-serif';
+      ctx.letterSpacing = '2px';
+      if (isL2Active) {
+        ctx.shadowColor = '#ff2a85';
+        ctx.shadowBlur = 28;
+      } else {
+        ctx.shadowColor = 'rgba(255, 42, 133, 0.40)';
+        ctx.shadowBlur = 16;
+      }
+      ctx.fillText(l2.text, textStartX, baseY + 85);
+      ctx.restore();
+
+      // Line 3: Serif Italic
+      const l3 = s2.line3 || { text: 'line 3', start: 18.0, end: 20.0 };
+      const isL3Active = (time >= l3.start && time < l3.end);
+      ctx.save();
+      ctx.fillStyle = isL3Active ? '#ffffff' : '#ffdbe8';
+      ctx.font = 'italic 500 46px "Playfair Display", serif';
+      if (isL3Active) {
+        ctx.shadowColor = '#ff2a85';
+        ctx.shadowBlur = 18;
+      }
+      ctx.fillText(l3.text, textStartX, baseY + 165);
+      ctx.restore();
+
+      // Line 4: Glowing Neon Script
+      const l4 = s2.line4 || { text: 'line 4', start: 20.0, end: 22.0 };
+      const isL4Active = (time >= l4.start);
+      ctx.save();
+      ctx.translate(textStartX + 20, baseY + 280);
+      ctx.rotate(-0.06);
+
+      ctx.font = '125px "Great Vibes", cursive';
+      const bloomSize = isL4Active ? (45 + pulse * 25) : (26 + pulse * 14);
+      ctx.shadowColor = '#ff0055';
+      ctx.shadowBlur = bloomSize;
+      ctx.fillStyle = '#ff2a85';
+      ctx.fillText(l4.text, 0, 0);
+
+      ctx.shadowColor = '#ffa6d2';
+      ctx.shadowBlur = 10;
+      ctx.fillStyle = '#ffffff';
+      ctx.fillText(l4.text, 0, 0);
+      ctx.restore();
+
+      ctx.restore();
+    }
+
+    function renderScene3_KineticDrop(ctx, time, sceneAlpha) {
+      ctx.save();
+      ctx.globalAlpha = sceneAlpha;
+
+      const centerX = 540;
+      const centerY = 960;
+      const s3 = CONFIG.scene3 || {};
+
+      const zoom = 1.0 + (time - (s3.start || 22.0)) * 0.015;
+      ctx.translate(centerX, centerY);
+      ctx.scale(zoom, zoom);
+
+      ctx.save();
+      ctx.textAlign = 'center';
+      ctx.fillStyle = '#fce4ec';
+      ctx.font = 'italic 500 50px "Playfair Display", serif';
+      ctx.fillText(s3.line1 || 'Line 1', 0, -50);
+      ctx.restore();
+
+      ctx.save();
+      ctx.textAlign = 'center';
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '900 66px "Syne", sans-serif';
+      ctx.letterSpacing = '1px';
+      ctx.shadowColor = '#ff2a85';
+      ctx.shadowBlur = 26;
+      ctx.fillText(s3.line2 || 'LINE 2', 0, 55);
+      ctx.restore();
+
+      ctx.restore();
+    }
+
+    function renderScene4_ChromeHero(ctx, time, sceneAlpha) {
+      ctx.save();
+      ctx.globalAlpha = sceneAlpha;
+
+      const centerX = 540;
+      const centerY = 920;
+      const s4 = CONFIG.scene4 || {};
+
+      const heroText = s4.heroTitle || 'HERO TITLE';
+
+      // 3D Chrome Title
+      ctx.save();
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      // Dynamically size if title is long
+      const fontSize = heroText.length > 10 ? 60 : (heroText.length > 7 ? 72 : 84);
+      ctx.font = `900 ${fontSize}px "Syne", sans-serif`;
+      ctx.letterSpacing = '2px';
+
+      for (let offset = 6; offset >= 1; offset--) {
+        ctx.fillStyle = `rgba(18, 4, 15, ${0.4 + offset * 0.06})`;
+        ctx.fillText(heroText, centerX, centerY + offset * 2.2);
+      }
+
+      const chromeGrad = ctx.createLinearGradient(0, centerY - 45, 0, centerY + 45);
+      chromeGrad.addColorStop(0.00, '#d8e2f0');
+      chromeGrad.addColorStop(0.36, '#ffffff');
+      chromeGrad.addColorStop(0.44, '#121622');
+      chromeGrad.addColorStop(0.56, '#5a698a');
+      chromeGrad.addColorStop(0.88, '#ffffff');
+      chromeGrad.addColorStop(1.00, '#94a4c0');
+
+      ctx.fillStyle = chromeGrad;
+      ctx.shadowColor = 'rgba(255, 42, 133, 0.45)';
+      ctx.shadowBlur = 30;
+      ctx.fillText(heroText, centerX, centerY);
+
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.65)';
+      ctx.lineWidth = 2.0;
+      ctx.strokeText(heroText, centerX, centerY);
+
+      // Anamorphic Lens Flare Beam
+      const flarePos = ((time * 0.65) % 1.0);
+      const flareX = centerX - 500 + flarePos * 1000;
+      const flareGrad = ctx.createLinearGradient(flareX - 150, centerY, flareX + 150, centerY);
+      flareGrad.addColorStop(0, 'rgba(255, 255, 255, 0)');
+      flareGrad.addColorStop(0.5, 'rgba(255, 255, 255, 0.65)');
+      flareGrad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+
+      ctx.save();
+      ctx.globalCompositeOperation = 'screen';
+      ctx.fillStyle = flareGrad;
+      ctx.fillRect(flareX - 150, centerY - 7, 300, 14);
+      ctx.restore();
+
+      ctx.restore();
+
+      // Subtitle
+      if (s4.subtitle) {
+        ctx.save();
+        ctx.textAlign = 'center';
+        ctx.fillStyle = 'rgba(255, 220, 235, 0.88)';
+        ctx.font = 'italic 500 42px "Playfair Display", serif';
+        ctx.fillText(s4.subtitle, centerX, centerY + 110);
+        ctx.restore();
+      }
+
+      // Spotify Capsule Pill
+      const pillW = 440;
+      const pillH = 64;
+      const pillX = centerX - pillW / 2;
+      const pillY = centerY + 210;
+
+      ctx.save();
+      roundRect(ctx, pillX, pillY, pillW, pillH, 32);
+      ctx.fillStyle = 'rgba(28, 8, 20, 0.85)';
+      ctx.fill();
+
+      roundRect(ctx, pillX, pillY, pillW, pillH, 32);
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.18)';
+      ctx.lineWidth = 1.2;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(pillX + 38, pillY + pillH / 2, 14, 0, Math.PI * 2);
+      ctx.fillStyle = '#1ed760';
+      ctx.fill();
+
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '600 24px "Plus Jakarta Sans", sans-serif';
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(s4.pillBadge || `${CONFIG.artist} · ${CONFIG.title}`, pillX + 68, pillY + pillH / 2);
+      ctx.restore();
+
+      ctx.restore();
+    }
+
+    function renderLensVignette(ctx) {
+      ctx.save();
+      const vg = ctx.createRadialGradient(540, 960, 500, 540, 960, 1050);
+      vg.addColorStop(0, 'rgba(0, 0, 0, 0)');
+      vg.addColorStop(1, 'rgba(0, 0, 0, 0.48)');
+      ctx.fillStyle = vg;
+      ctx.fillRect(0, 0, 1080, 1920);
+      ctx.restore();
+    }
+
+    function roundRect(ctx, x, y, width, height, radius) {
+      ctx.beginPath();
+      ctx.moveTo(x + radius, y);
+      ctx.lineTo(x + width - radius, y);
+      ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+      ctx.lineTo(x + width, y + height - radius);
+      ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+      ctx.lineTo(x + radius, y + height);
+      ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+      ctx.lineTo(x, y + radius);
+      ctx.quadraticCurveTo(x, y, x + radius, y);
+      ctx.closePath();
+    }
+  </script>
+</body>
+</html>
+

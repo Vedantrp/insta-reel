@@ -1,0 +1,129 @@
+name: Daily Reels Generator
+
+on:
+  schedule:
+    # Runs daily at 04:00 UTC (09:30 AM IST)
+    - cron: '0 4 * * *'
+  workflow_dispatch:
+    inputs:
+      song_count:
+        description: 'Number of reels to generate'
+        required: true
+        default: '5'
+      force_song_id:
+        description: 'Optional: Specific song ID from songs_queue.json to force-generate'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-generate:
+    name: Generate Daily Reels
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get Current Date
+        id: date
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install System Dependencies (FFmpeg & Chrome)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg wget gnupg
+          # Ensure Google Chrome Stable is installed
+          if ! command -v google-chrome &> /dev/null; then
+            wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+            sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+            sudo apt-get update
+            sudo apt-get install -y google-chrome-stable
+          fi
+          google-chrome --version
+          ffmpeg -version
+
+      - name: Cache Whisper Models
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface/hub
+          key: ${{ runner.os }}-whisper-base-${{ hashFiles('scripts/transcribe_clip.py') }}
+          restore-keys: |
+            ${{ runner.os }}-whisper-base-
+
+      - name: Install Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install yt-dlp faster-whisper numpy
+
+      - name: Run Daily Batch Reels Generator
+        env:
+          CHROME_BIN: /usr/bin/google-chrome
+        run: |
+          COUNT="${{ github.event.inputs.song_count || '5' }}"
+          FORCE_ID="${{ github.event.inputs.force_song_id || '' }}"
+          
+          if [ -n "$FORCE_ID" ]; then
+            echo "[*] Triggering forced single song run: $FORCE_ID"
+            node scripts/daily_batch.js --force "$FORCE_ID"
+          else
+            echo "[*] Triggering daily batch of $COUNT reels"
+            node scripts/daily_batch.js --count "$COUNT"
+          fi
+
+      - name: Upload Reels to GitHub Actions Artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: daily-reels-${{ steps.date.outputs.date }}
+          path: output/
+          retention-days: 90
+
+      - name: Publish Daily GitHub Release (Direct 1-Click Video Downloads)
+        uses: softprops/action-gh-release@v2
+        if: success()
+        with:
+          tag_name: reels-${{ steps.date.outputs.date }}-${{ github.run_number }}
+          name: "Daily Reels - ${{ steps.date.outputs.date }}"
+          body: |
+            ## 🎬 Autonomous Daily Lyric Reels (${{ steps.date.outputs.date }})
+            
+            Generated with **Aesthetic Spotify + Neon Motion Typography Engine**.
+            Download the 1080×1920 MP4 files directly from the assets below!
+          files: |
+            output/**/*.mp4
+            output/**/batch_summary.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit and Push Updated Song Queue
+        if: always()
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add songs_queue.json
+          # Check if there are changes to commit
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto: Update completed songs queue [skip ci]"
+            git push origin HEAD
+          else
+            echo "[*] No queue changes to commit."
+          fi
+
