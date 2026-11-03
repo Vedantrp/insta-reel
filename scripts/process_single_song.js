@@ -55,12 +55,19 @@ async function processSong(song, outputDir = 'output') {
     const artCmd = `python scripts/fetch_artwork.py "${artQuery}" "${coverPath}"`;
     run(artCmd, `Fetching 1024x1024 Album Art`);
 
-    // 4. Transcribe word-level timestamps using Whisper
-    const autoPrompt = song.initial_prompt ||
-      `Romanized Hindi English Latin lyrics: ${song.title} ${song.artist} ${song.hook1 || ''} ${song.hook2 || ''} ${song.hook3 || ''} ${song.hook4 || ''} ${song.drop_line1 || ''} ${song.drop_line2 || ''} ${song.subtitle || ''}`;
-    const cleanPrompt = autoPrompt.replace(/["\n\r]/g, ' ').trim();
-    const transcribeCmd = `python scripts/transcribe_clip.py "${clipAudioPath}" "${wordsJsonPath}" "${cleanPrompt}"`;
-    run(transcribeCmd, `Running Faster-Whisper Word Alignment`);
+    // 4. Transcribe word-level timestamps (or use curated studio lyrics)
+    const hasCuratedLyrics = (song.scene1 && (song.scene1.stanzas || song.scene1.stanzas_text)) || song.stanzas_text;
+    if (!hasCuratedLyrics) {
+      const autoPrompt = song.initial_prompt ||
+        `Romanized Hindi English Latin lyrics: ${song.title} ${song.artist} ${song.hook1 || ''} ${song.hook2 || ''} ${song.hook3 || ''} ${song.hook4 || ''} ${song.drop_line1 || ''} ${song.drop_line2 || ''} ${song.subtitle || ''}`;
+      const cleanPrompt = autoPrompt.replace(/["\n\r]/g, ' ').trim();
+      const transcribeCmd = `python scripts/transcribe_clip.py "${clipAudioPath}" "${wordsJsonPath}" "${cleanPrompt}"`;
+      run(transcribeCmd, `Running Faster-Whisper Word Alignment`);
+    } else {
+      console.log(`\n==============================================`);
+      console.log(`[*] Using Curated Studio Lyrics for: ${song.title} (bypassing ASR hallucination)`);
+      console.log(`==============================================`);
+    }
 
     // 5. Build dynamic reel config
     const metaObj = {
@@ -78,6 +85,7 @@ async function processSong(song, outputDir = 'output') {
         accentLight: "#ffa6d2",
         accentGlow: "#ff0055"
       },
+      stanzas_text: song.stanzas_text,
       scene1: song.scene1,
       scene2: song.scene2,
       scene3: song.scene3,

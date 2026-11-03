@@ -122,7 +122,7 @@
     "title": "Tauba Tauba",
     "artist": "Karan Aujla · Bad Newz",
     "search_query": "Tauba Tauba Karan Aujla Vicky Kaushal official audio",
-    "chorus_start": "00:00:26.00",
+    "chorus_start": "00:00:15.00",
     "duration": 33,
     "hero_title": "TAUBA TAUBA",
     "symbolName": "flame",
@@ -138,21 +138,33 @@
     },
     "hook1": "husn tera",
     "hook2": "TAUBA TAUBA",
-    "hook3": "qayamat kare",
+    "hook3": "chal teri",
     "hook4": "tauba",
     "drop_line1": "lakh lakh nakhre",
     "drop_line2": "TERA NAADAAN",
     "subtitle": "husn tera tauba tauba...",
-    "status": "completed",
-    "completed_at": "2026-11-03T06:26:21.880Z",
-    "video_file": "tauba_tauba_aesthetic_9_16.mp4"
+    "status": "pending",
+    "stanzas_text": [
+      {
+        "start": 0.5,
+        "end": 6.5,
+        "line1": "O oye oye",
+        "line2": "husn tera tauba tauba"
+      },
+      {
+        "start": 7.0,
+        "end": 13.0,
+        "line1": "chal teri tauba tauba",
+        "line2": "lakh lakh nakhre tera"
+      }
+    ]
   },
   {
     "id": "soulmate",
     "title": "Soulmate",
     "artist": "Arijit Singh, Badshah · Ek Tha Raja",
     "search_query": "Soulmate Arijit Singh Badshah official audio",
-    "chorus_start": "00:00:40.00",
+    "chorus_start": "00:00:36.00",
     "duration": 33,
     "hero_title": "SOULMATE",
     "symbolName": "infinity_heart",
@@ -173,16 +185,28 @@
     "drop_line1": "tujhe chahta hoon",
     "drop_line2": "BEPANAAH",
     "subtitle": "tu ban ja mera soulmate...",
-    "status": "completed",
-    "completed_at": "2026-11-03T06:27:21.838Z",
-    "video_file": "soulmate_aesthetic_9_16.mp4"
+    "status": "pending",
+    "stanzas_text": [
+      {
+        "start": 0.5,
+        "end": 6.5,
+        "line1": "Tu ban ja mera",
+        "line2": "soulmate meri jaan"
+      },
+      {
+        "start": 7.0,
+        "end": 13.0,
+        "line1": "tujhe chahta hoon",
+        "line2": "bepanaah har ghadi"
+      }
+    ]
   },
   {
     "id": "ve_kamleya",
     "title": "Ve Kamleya",
     "artist": "Arijit Singh, Shreya Ghoshal · Rocky Aur Rani Kii Prem Kahaani",
     "search_query": "Ve Kamleya Arijit Singh Rocky Aur Rani official audio",
-    "chorus_start": "00:00:50.00",
+    "chorus_start": "00:00:46.00",
     "duration": 33,
     "hero_title": "VE KAMLEYA",
     "symbolName": "butterfly",
@@ -203,16 +227,28 @@
     "drop_line1": "kyun jaave tu",
     "drop_line2": "USKE PEECHE",
     "subtitle": "ve kamleya mere naadaan dil...",
-    "status": "completed",
-    "completed_at": "2026-11-03T06:28:32.064Z",
-    "video_file": "ve_kamleya_aesthetic_9_16.mp4"
+    "status": "pending",
+    "stanzas_text": [
+      {
+        "start": 0.5,
+        "end": 6.5,
+        "line1": "Ve kamleya ve kamleya",
+        "line2": "mere naadaan dil ve"
+      },
+      {
+        "start": 7.0,
+        "end": 13.0,
+        "line1": "kyun rooth jaave tu",
+        "line2": "ishq de raahon pe"
+      }
+    ]
   },
   {
     "id": "jo_tum_mere_ho",
     "title": "Jo Tum Mere Ho",
     "artist": "Anuv Jain",
     "search_query": "Jo Tum Mere Ho Anuv Jain official audio",
-    "chorus_start": "00:00:42.00",
+    "chorus_start": "00:00:40.00",
     "duration": 33,
     "hero_title": "JO TUM MERE HO",
     "symbolName": "crescent_moon",
@@ -233,16 +269,28 @@
     "drop_line1": "kya darr phir",
     "drop_line2": "IS JAHAAN KA",
     "subtitle": "jo tum mere ho...",
-    "status": "completed",
-    "completed_at": "2026-11-03T06:29:44.054Z",
-    "video_file": "jo_tum_mere_ho_aesthetic_9_16.mp4"
+    "status": "pending",
+    "stanzas_text": [
+      {
+        "start": 0.5,
+        "end": 6.5,
+        "line1": "Jo tum mere ho jao",
+        "line2": "toh kya darr phir"
+      },
+      {
+        "start": 7.0,
+        "end": 13.0,
+        "line1": "meri har ek duaa",
+        "line2": "tera hi naam le"
+      }
+    ]
   },
   {
     "id": "pehle_bhi_main",
     "title": "Pehle Bhi Main",
     "artist": "Vishal Mishra, Raj Shekhar · Animal",
     "search_query": "Pehle Bhi Main Vishal Mishra Animal official audio",
-    "chorus_start": "00:00:44.00",
+    "chorus_start": "00:00:42.00",
     "duration": 33,
     "hero_title": "PEHLE BHI MAIN",
     "symbolName": "flame",
@@ -257,22 +305,34 @@
       "accentGlow": "#dc2626"
     },
     "hook1": "pehle bhi main",
-    "hook2": "TUMSE MILA HOON",
+    "hook2": "TUMSE MILA",
     "hook3": "pehli dafa",
-    "hook4": "milo",
-    "drop_line1": "jaise pehli dafa",
-    "drop_line2": "HUE HOON BAAWARA",
+    "hook4": "milke laga",
+    "drop_line1": "tune chhua toh",
+    "drop_line2": "SAANSEIN RUK GAYIN",
     "subtitle": "pehle bhi main tumse mila hoon...",
-    "status": "completed",
-    "completed_at": "2026-11-03T06:31:06.480Z",
-    "video_file": "pehle_bhi_main_aesthetic_9_16.mp4"
+    "status": "pending",
+    "stanzas_text": [
+      {
+        "start": 0.5,
+        "end": 6.5,
+        "line1": "Pehle bhi main",
+        "line2": "tumse mila hoon"
+      },
+      {
+        "start": 7.0,
+        "end": 13.0,
+        "line1": "pehli dafa hi",
+        "line2": "milke aisa laga"
+      }
+    ]
   },
   {
     "id": "satranga",
     "title": "Satranga",
     "artist": "Arijit Singh, Shreyas Puranik · Animal",
     "search_query": "Satranga Arijit Singh Animal official audio",
-    "chorus_start": "00:00:48.00",
+    "chorus_start": "00:00:52.00",
     "duration": 33,
     "hero_title": "SATRANGA",
     "symbolName": "lotus",
@@ -286,21 +346,35 @@
       "accentLight": "#fde68a",
       "accentGlow": "#d97706"
     },
-    "hook1": "ye ishq",
-    "hook2": "SATRANGA HAI",
-    "hook3": "tera rang",
-    "hook4": "ishq",
-    "drop_line1": "har rang mein tu",
-    "drop_line2": "SAMAYA HUA HAI",
-    "subtitle": "ye ishq satranga hai...",
-    "status": "pending"
+    "hook1": "satranga",
+    "hook2": "ISHQ TERA",
+    "hook3": "rang jaaun",
+    "hook4": "main",
+    "drop_line1": "tere bina nahi",
+    "drop_line2": "JINA GUZARA",
+    "subtitle": "satranga ban ja tu...",
+    "status": "pending",
+    "stanzas_text": [
+      {
+        "start": 0.5,
+        "end": 6.5,
+        "line1": "Tu mera rasta",
+        "line2": "tu hi manjil meri"
+      },
+      {
+        "start": 7.0,
+        "end": 13.0,
+        "line1": "satranga ban ja tu",
+        "line2": "mere ishq da rang"
+      }
+    ]
   },
   {
     "id": "ishq",
     "title": "Ishq",
     "artist": "Faheem Abdullah, Rauhan Malik",
     "search_query": "Ishq Faheem Abdullah Rauhan Malik official audio",
-    "chorus_start": "00:00:52.00",
+    "chorus_start": "00:00:38.00",
     "duration": 33,
     "hero_title": "ISHQ",
     "symbolName": "infinity_heart",
@@ -314,21 +388,35 @@
       "accentLight": "#a7f3d0",
       "accentGlow": "#059669"
     },
-    "hook1": "kareeb aa",
-    "hook2": "ZARA DEEDAR",
-    "hook3": "kar loon",
-    "hook4": "ishq",
-    "drop_line1": "tera noor sa",
-    "drop_line2": "CHEHRA MERA",
-    "subtitle": "tera nasha sa chhaya hai...",
-    "status": "pending"
+    "hook1": "ishq tera",
+    "hook2": "ROOH DA",
+    "hook3": "sukoon hai",
+    "hook4": "mera",
+    "drop_line1": "ho gaya hai",
+    "drop_line2": "TERA DEEWANA",
+    "subtitle": "ishq tera laage jaan se pyaara...",
+    "status": "pending",
+    "stanzas_text": [
+      {
+        "start": 0.5,
+        "end": 6.5,
+        "line1": "Ishq tera laage",
+        "line2": "jaan se pyaara ve"
+      },
+      {
+        "start": 7.0,
+        "end": 13.0,
+        "line1": "dil yeh sambhalta nahi",
+        "line2": "tere bina sajna"
+      }
+    ]
   },
   {
     "id": "tum_se",
     "title": "Tum Se",
     "artist": "Sachin-Jigar, Raghav Chaitanya · TBMAUJ",
     "search_query": "Tum Se Raghav Chaitanya Teri Baaton Mein official audio",
-    "chorus_start": "00:00:38.00",
+    "chorus_start": "00:00:30.00",
     "duration": 33,
     "hero_title": "TUM SE",
     "symbolName": "butterfly",
@@ -343,13 +431,27 @@
       "accentGlow": "#db2777"
     },
     "hook1": "tum se hi",
-    "hook2": "HAR KAHANI",
-    "hook3": "meri har",
-    "hook4": "subah",
-    "drop_line1": "ab toh jeena",
-    "drop_line2": "TERE NAAM HAI",
-    "subtitle": "tum se hi din hota hai...",
-    "status": "pending"
+    "hook2": "TUM SE HI",
+    "hook3": "mera jahaan",
+    "hook4": "tum se",
+    "drop_line1": "saari khushiyan",
+    "drop_line2": "TERE NAAM KIYIN",
+    "subtitle": "tum se hi din dhalta hai...",
+    "status": "pending",
+    "stanzas_text": [
+      {
+        "start": 0.5,
+        "end": 6.5,
+        "line1": "Tum se hi subah",
+        "line2": "tum se hi shaam meri"
+      },
+      {
+        "start": 7.0,
+        "end": 13.0,
+        "line1": "tum se hi dhadkan",
+        "line2": "dil ki har baat meri"
+      }
+    ]
   },
   {
     "id": "apna_bana_le",
@@ -371,20 +473,34 @@
       "accentGlow": "#9333ea"
     },
     "hook1": "apna bana le",
-    "hook2": "PIYA",
-    "hook3": "dil ke yeh",
-    "hook4": "taar",
-    "drop_line1": "tujhko pukare",
-    "drop_line2": "HAR DUM SAJAN",
+    "hook2": "APNA BANA LE",
+    "hook3": "piya mujhe",
+    "hook4": "apna",
+    "drop_line1": "chhod ke saara",
+    "drop_line2": "JAG TERE PEECHE",
     "subtitle": "apna bana le piya...",
-    "status": "pending"
+    "status": "pending",
+    "stanzas_text": [
+      {
+        "start": 0.5,
+        "end": 6.5,
+        "line1": "Apna bana le piya",
+        "line2": "apna bana le mujhe"
+      },
+      {
+        "start": 7.0,
+        "end": 13.0,
+        "line1": "dil ke nagar mein",
+        "line2": "ghar basaa le piya"
+      }
+    ]
   },
   {
     "id": "kesariya",
     "title": "Kesariya",
     "artist": "Arijit Singh, Pritam · Brahmastra",
     "search_query": "Kesariya Arijit Singh Brahmastra official audio",
-    "chorus_start": "00:00:55.00",
+    "chorus_start": "00:00:48.00",
     "duration": 33,
     "hero_title": "KESARIYA",
     "symbolName": "lotus",
@@ -401,10 +517,24 @@
     "hook1": "kesariya tera",
     "hook2": "ISHQ HAI PIYA",
     "hook3": "rang jaaun",
-    "hook4": "rang",
-    "drop_line1": "jo main hath lagaun",
-    "drop_line2": "DIN BEETE SAARA",
+    "hook4": "kesariya",
+    "drop_line1": "beete saare din",
+    "drop_line2": "TERI FIKRAAN MEIN",
     "subtitle": "kesariya tera ishq hai piya...",
-    "status": "pending"
+    "status": "pending",
+    "stanzas_text": [
+      {
+        "start": 0.5,
+        "end": 6.5,
+        "line1": "Kesariya tera",
+        "line2": "ishq hai piya"
+      },
+      {
+        "start": 7.0,
+        "end": 13.0,
+        "line1": "rang jaaun jo main",
+        "line2": "haath lagaun tujhe"
+      }
+    ]
   }
 ]
