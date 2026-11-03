@@ -122,7 +122,7 @@
     "title": "Tauba Tauba",
     "artist": "Karan Aujla · Bad Newz",
     "search_query": "Tauba Tauba Karan Aujla Vicky Kaushal official audio",
-    "chorus_start": "00:00:15.00",
+    "chorus_start": "00:01:00.00",
     "duration": 33,
     "hero_title": "TAUBA TAUBA",
     "symbolName": "flame",
@@ -158,15 +158,157 @@
         "line2": "lakh lakh nakhre tera"
       }
     ],
-    "completed_at": "2026-11-03T07:02:15.740Z",
-    "video_file": "tauba_tauba_aesthetic_9_16.mp4"
+    "scene1": {
+      "duration": 13.5,
+      "stanzas": [
+        {
+          "start": 0.0,
+          "end": 4.5,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "Husn",
+                  "s": 0.0,
+                  "e": 0.24
+                },
+                {
+                  "w": "tera",
+                  "s": 0.24,
+                  "e": 0.52
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "tauba",
+                  "s": 0.52,
+                  "e": 1.24
+                },
+                {
+                  "w": "tauba",
+                  "s": 1.24,
+                  "e": 2.56
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": 4.8,
+          "end": 9.2,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "Husn",
+                  "s": 5.0,
+                  "e": 5.26
+                },
+                {
+                  "w": "tera",
+                  "s": 5.26,
+                  "e": 5.48
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "tauba",
+                  "s": 5.48,
+                  "e": 6.28
+                },
+                {
+                  "w": "tauba",
+                  "s": 6.28,
+                  "e": 7.74
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": 9.5,
+          "end": 13.5,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "Husn",
+                  "s": 9.86,
+                  "e": 10.32
+                },
+                {
+                  "w": "tera",
+                  "s": 10.32,
+                  "e": 10.62
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "tauba",
+                  "s": 10.62,
+                  "e": 11.36
+                },
+                {
+                  "w": "tauba",
+                  "s": 11.36,
+                  "e": 12.8
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "scene2": {
+      "start": 13.5,
+      "end": 22.0,
+      "line1": {
+        "text": "husn tera",
+        "start": 14.86,
+        "end": 15.6
+      },
+      "line2": {
+        "text": "TAUBA TAUBA",
+        "start": 15.6,
+        "end": 18.22
+      },
+      "line3": {
+        "text": "chal teri",
+        "start": 18.5,
+        "end": 19.8
+      },
+      "line4": {
+        "text": "tauba",
+        "start": 19.8,
+        "end": 22.0
+      }
+    },
+    "scene3": {
+      "start": 22.0,
+      "end": 27.5,
+      "line1": "lakh lakh nakhre",
+      "line2": "TERA NAADAAN"
+    },
+    "scene4": {
+      "start": 27.5,
+      "end": 33.0,
+      "heroTitle": "TAUBA TAUBA",
+      "subtitle": "husn tera tauba tauba...",
+      "pillBadge": "Karan Aujla · Tauba Tauba"
+    }
   },
   {
     "id": "soulmate",
     "title": "Soulmate",
     "artist": "Arijit Singh, Badshah · Ek Tha Raja",
     "search_query": "Soulmate Arijit Singh Badshah official audio",
-    "chorus_start": "00:00:36.00",
+    "chorus_start": "00:00:48.00",
     "duration": 33,
     "hero_title": "SOULMATE",
     "symbolName": "infinity_heart",
@@ -202,15 +344,143 @@
         "line2": "bepanaah har ghadi"
       }
     ],
-    "completed_at": "2026-11-03T07:03:03.832Z",
-    "video_file": "soulmate_aesthetic_9_16.mp4"
+    "scene1": {
+      "duration": 13.5,
+      "stanzas": [
+        {
+          "start": 0.0,
+          "end": 6.5,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "Kaisi",
+                  "s": 0.5,
+                  "e": 1.8
+                },
+                {
+                  "w": "aayi",
+                  "s": 1.8,
+                  "e": 2.6
+                },
+                {
+                  "w": "hai",
+                  "s": 2.6,
+                  "e": 3.2
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "jindri",
+                  "s": 3.2,
+                  "e": 4.5
+                },
+                {
+                  "w": "naam",
+                  "s": 4.5,
+                  "e": 5.5
+                },
+                {
+                  "w": "tere",
+                  "s": 5.5,
+                  "e": 6.4
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": 6.8,
+          "end": 13.2,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "tu",
+                  "s": 6.8,
+                  "e": 7.5
+                },
+                {
+                  "w": "ban",
+                  "s": 7.5,
+                  "e": 8.5
+                },
+                {
+                  "w": "ja",
+                  "s": 8.5,
+                  "e": 9.5
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "soulmate",
+                  "s": 9.5,
+                  "e": 11.2
+                },
+                {
+                  "w": "meri",
+                  "s": 11.2,
+                  "e": 12.0
+                },
+                {
+                  "w": "jaan",
+                  "s": 12.0,
+                  "e": 12.8
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "scene2": {
+      "start": 13.5,
+      "end": 22.0,
+      "line1": {
+        "text": "tu ban ja",
+        "start": 13.5,
+        "end": 15.5
+      },
+      "line2": {
+        "text": "SOULMATE",
+        "start": 15.5,
+        "end": 18.0
+      },
+      "line3": {
+        "text": "meri jaan",
+        "start": 18.0,
+        "end": 20.0
+      },
+      "line4": {
+        "text": "soulmate",
+        "start": 20.0,
+        "end": 22.0
+      }
+    },
+    "scene3": {
+      "start": 22.0,
+      "end": 27.5,
+      "line1": "tujhe chahta hoon",
+      "line2": "BEPANAAH"
+    },
+    "scene4": {
+      "start": 27.5,
+      "end": 33.0,
+      "heroTitle": "SOULMATE",
+      "subtitle": "tu ban ja mera soulmate...",
+      "pillBadge": "Arijit Singh · Soulmate"
+    }
   },
   {
     "id": "ve_kamleya",
     "title": "Ve Kamleya",
     "artist": "Arijit Singh, Shreya Ghoshal · Rocky Aur Rani Kii Prem Kahaani",
     "search_query": "Ve Kamleya Arijit Singh Rocky Aur Rani official audio",
-    "chorus_start": "00:00:46.00",
+    "chorus_start": "00:00:08.50",
     "duration": 33,
     "hero_title": "VE KAMLEYA",
     "symbolName": "butterfly",
@@ -246,15 +516,128 @@
         "line2": "ishq de raahon pe"
       }
     ],
-    "completed_at": "2026-11-03T07:03:51.523Z",
-    "video_file": "ve_kamleya_aesthetic_9_16.mp4"
+    "scene1": {
+      "duration": 13.5,
+      "stanzas": [
+        {
+          "start": 0.0,
+          "end": 6.4,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "Ve",
+                  "s": 0.48,
+                  "e": 1.88
+                },
+                {
+                  "w": "kamleya",
+                  "s": 1.88,
+                  "e": 2.94
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "ve",
+                  "s": 2.94,
+                  "e": 4.58
+                },
+                {
+                  "w": "kamleya",
+                  "s": 4.58,
+                  "e": 6.26
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": 6.5,
+          "end": 13.2,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "mere",
+                  "s": 6.56,
+                  "e": 7.52
+                },
+                {
+                  "w": "naadaan",
+                  "s": 7.52,
+                  "e": 8.76
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "dil",
+                  "s": 8.76,
+                  "e": 9.02
+                },
+                {
+                  "w": "ve",
+                  "s": 9.02,
+                  "e": 10.8
+                },
+                {
+                  "w": "kamleya",
+                  "s": 10.8,
+                  "e": 12.8
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "scene2": {
+      "start": 13.5,
+      "end": 22.0,
+      "line1": {
+        "text": "ve kamleya",
+        "start": 13.5,
+        "end": 15.5
+      },
+      "line2": {
+        "text": "VE KAMLEYA",
+        "start": 15.5,
+        "end": 18.0
+      },
+      "line3": {
+        "text": "mere dil",
+        "start": 18.0,
+        "end": 20.0
+      },
+      "line4": {
+        "text": "kamleya",
+        "start": 20.0,
+        "end": 22.0
+      }
+    },
+    "scene3": {
+      "start": 22.0,
+      "end": 27.5,
+      "line1": "kyun jaave tu",
+      "line2": "USKE PEECHE"
+    },
+    "scene4": {
+      "start": 27.5,
+      "end": 33.0,
+      "heroTitle": "VE KAMLEYA",
+      "subtitle": "ve kamleya mere naadaan dil...",
+      "pillBadge": "Arijit Singh · Ve Kamleya"
+    }
   },
   {
     "id": "jo_tum_mere_ho",
     "title": "Jo Tum Mere Ho",
     "artist": "Anuv Jain",
     "search_query": "Jo Tum Mere Ho Anuv Jain official audio",
-    "chorus_start": "00:00:40.00",
+    "chorus_start": "00:00:38.00",
     "duration": 33,
     "hero_title": "JO TUM MERE HO",
     "symbolName": "crescent_moon",
@@ -290,15 +673,128 @@
         "line2": "tera hi naam le"
       }
     ],
-    "completed_at": "2026-11-03T07:04:37.302Z",
-    "video_file": "jo_tum_mere_ho_aesthetic_9_16.mp4"
+    "scene1": {
+      "duration": 13.5,
+      "stanzas": [
+        {
+          "start": 0.0,
+          "end": 6.2,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "Jo",
+                  "s": 0.44,
+                  "e": 1.72
+                },
+                {
+                  "w": "tum",
+                  "s": 1.72,
+                  "e": 2.32
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "mere",
+                  "s": 2.32,
+                  "e": 3.62
+                },
+                {
+                  "w": "ho",
+                  "s": 3.62,
+                  "e": 5.46
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": 6.5,
+          "end": 13.2,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "kya",
+                  "s": 6.6,
+                  "e": 8.2
+                },
+                {
+                  "w": "darr",
+                  "s": 8.2,
+                  "e": 9.4
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "is",
+                  "s": 9.4,
+                  "e": 10.8
+                },
+                {
+                  "w": "jahaan",
+                  "s": 10.8,
+                  "e": 11.9
+                },
+                {
+                  "w": "ka",
+                  "s": 11.9,
+                  "e": 12.8
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "scene2": {
+      "start": 13.5,
+      "end": 22.0,
+      "line1": {
+        "text": "jo tum mere",
+        "start": 13.5,
+        "end": 15.5
+      },
+      "line2": {
+        "text": "HO JAO",
+        "start": 15.5,
+        "end": 18.0
+      },
+      "line3": {
+        "text": "meri har",
+        "start": 18.0,
+        "end": 20.0
+      },
+      "line4": {
+        "text": "duaa",
+        "start": 20.0,
+        "end": 22.0
+      }
+    },
+    "scene3": {
+      "start": 22.0,
+      "end": 27.5,
+      "line1": "kya darr phir",
+      "line2": "IS JAHAAN KA"
+    },
+    "scene4": {
+      "start": 27.5,
+      "end": 33.0,
+      "heroTitle": "JO TUM MERE HO",
+      "subtitle": "jo tum mere ho...",
+      "pillBadge": "Anuv Jain · Jo Tum Mere Ho"
+    }
   },
   {
     "id": "pehle_bhi_main",
     "title": "Pehle Bhi Main",
     "artist": "Vishal Mishra, Raj Shekhar · Animal",
     "search_query": "Pehle Bhi Main Vishal Mishra Animal official audio",
-    "chorus_start": "00:00:42.00",
+    "chorus_start": "00:00:24.00",
     "duration": 33,
     "hero_title": "PEHLE BHI MAIN",
     "symbolName": "flame",
@@ -334,8 +830,136 @@
         "line2": "milke aisa laga"
       }
     ],
-    "completed_at": "2026-11-03T07:05:24.790Z",
-    "video_file": "pehle_bhi_main_aesthetic_9_16.mp4"
+    "scene1": {
+      "duration": 13.5,
+      "stanzas": [
+        {
+          "start": 0.0,
+          "end": 6.5,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "Pehle",
+                  "s": 0.68,
+                  "e": 1.76
+                },
+                {
+                  "w": "bhi",
+                  "s": 1.76,
+                  "e": 2.1
+                },
+                {
+                  "w": "main",
+                  "s": 2.1,
+                  "e": 2.52
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "tumse",
+                  "s": 2.52,
+                  "e": 4.9
+                },
+                {
+                  "w": "mila",
+                  "s": 4.9,
+                  "e": 5.56
+                },
+                {
+                  "w": "hoon",
+                  "s": 5.56,
+                  "e": 6.4
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": 6.8,
+          "end": 13.2,
+          "lines": [
+            {
+              "words": [
+                {
+                  "w": "pehli",
+                  "s": 6.88,
+                  "e": 8.02
+                },
+                {
+                  "w": "dafa",
+                  "s": 8.02,
+                  "e": 8.56
+                },
+                {
+                  "w": "hi",
+                  "s": 8.56,
+                  "e": 9.18
+                }
+              ]
+            },
+            {
+              "words": [
+                {
+                  "w": "milke",
+                  "s": 9.18,
+                  "e": 10.22
+                },
+                {
+                  "w": "aisa",
+                  "s": 10.22,
+                  "e": 11.08
+                },
+                {
+                  "w": "laga",
+                  "s": 11.08,
+                  "e": 12.8
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "scene2": {
+      "start": 13.5,
+      "end": 22.0,
+      "line1": {
+        "text": "pehle bhi main",
+        "start": 13.5,
+        "end": 15.5
+      },
+      "line2": {
+        "text": "TUMSE MILA",
+        "start": 15.5,
+        "end": 18.0
+      },
+      "line3": {
+        "text": "pehli dafa",
+        "start": 18.0,
+        "end": 20.0
+      },
+      "line4": {
+        "text": "milke laga",
+        "start": 20.0,
+        "end": 22.0
+      }
+    },
+    "scene3": {
+      "start": 22.0,
+      "end": 27.5,
+      "line1": "tune chhua toh",
+      "line2": "SAANSEIN RUK GAYIN"
+    },
+    "scene4": {
+      "start": 27.5,
+      "end": 33.0,
+      "heroTitle": "PEHLE BHI MAIN",
+      "subtitle": "pehle bhi main tumse mila hoon...",
+      "pillBadge": "Vishal Mishra · Pehle Bhi Main"
+    }
   },
   {
     "id": "satranga",
