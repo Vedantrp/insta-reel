@@ -39,7 +39,9 @@ async function processSong(song, outputDir = 'output') {
   try {
     // 1. Download official audio via multi-tier downloader (bypasses bot-detection)
     const searchQuery = song.search_query || `${song.title} ${song.artist}`;
-    const audioCmd = `python scripts/fetch_audio.py "${searchQuery.replace(/"/g, '')}" "${fullAudioPath}"`;
+    const cleanTitle = (song.title || '').replace(/"/g, '');
+    const cleanArtist = (song.artist || '').replace(/"/g, '');
+    const audioCmd = `python scripts/fetch_audio.py "${searchQuery.replace(/"/g, '')}" "${fullAudioPath}" "${cleanTitle}" "${cleanArtist}"`;
     run(audioCmd, `Downloading Audio: ${searchQuery}`);
 
     // 2. Cut chorus segment (default 33.00s)
