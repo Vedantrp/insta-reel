@@ -143,7 +143,9 @@
     "drop_line1": "lakh lakh nakhre",
     "drop_line2": "TERA NAADAAN",
     "subtitle": "husn tera tauba tauba...",
-    "status": "pending"
+    "status": "completed",
+    "completed_at": "2026-11-03T06:26:21.880Z",
+    "video_file": "tauba_tauba_aesthetic_9_16.mp4"
   },
   {
     "id": "soulmate",
@@ -171,7 +173,9 @@
     "drop_line1": "tujhe chahta hoon",
     "drop_line2": "BEPANAAH",
     "subtitle": "tu ban ja mera soulmate...",
-    "status": "pending"
+    "status": "completed",
+    "completed_at": "2026-11-03T06:27:21.838Z",
+    "video_file": "soulmate_aesthetic_9_16.mp4"
   },
   {
     "id": "ve_kamleya",
@@ -199,7 +203,9 @@
     "drop_line1": "kyun jaave tu",
     "drop_line2": "USKE PEECHE",
     "subtitle": "ve kamleya mere naadaan dil...",
-    "status": "pending"
+    "status": "completed",
+    "completed_at": "2026-11-03T06:28:32.064Z",
+    "video_file": "ve_kamleya_aesthetic_9_16.mp4"
   },
   {
     "id": "jo_tum_mere_ho",
@@ -227,7 +233,9 @@
     "drop_line1": "kya darr phir",
     "drop_line2": "IS JAHAAN KA",
     "subtitle": "jo tum mere ho...",
-    "status": "pending"
+    "status": "completed",
+    "completed_at": "2026-11-03T06:29:44.054Z",
+    "video_file": "jo_tum_mere_ho_aesthetic_9_16.mp4"
   },
   {
     "id": "pehle_bhi_main",
@@ -255,7 +263,9 @@
     "drop_line1": "jaise pehli dafa",
     "drop_line2": "HUE HOON BAAWARA",
     "subtitle": "pehle bhi main tumse mila hoon...",
-    "status": "pending"
+    "status": "completed",
+    "completed_at": "2026-11-03T06:31:06.480Z",
+    "video_file": "pehle_bhi_main_aesthetic_9_16.mp4"
   },
   {
     "id": "satranga",
