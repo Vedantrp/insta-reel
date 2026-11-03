@@ -162,14 +162,14 @@
       "duration": 13.5,
       "stanzas": [
         {
-          "start": 0.0,
+          "start": 0,
           "end": 4.5,
           "lines": [
             {
               "words": [
                 {
                   "w": "Husn",
-                  "s": 0.0,
+                  "s": 0,
                   "e": 0.24
                 },
                 {
@@ -203,7 +203,7 @@
               "words": [
                 {
                   "w": "Husn",
-                  "s": 5.0,
+                  "s": 5,
                   "e": 5.26
                 },
                 {
@@ -267,7 +267,7 @@
     },
     "scene2": {
       "start": 13.5,
-      "end": 22.0,
+      "end": 22,
       "line1": {
         "text": "husn tera",
         "start": 14.86,
@@ -286,18 +286,18 @@
       "line4": {
         "text": "tauba",
         "start": 19.8,
-        "end": 22.0
+        "end": 22
       }
     },
     "scene3": {
-      "start": 22.0,
+      "start": 22,
       "end": 27.5,
       "line1": "lakh lakh nakhre",
       "line2": "TERA NAADAAN"
     },
     "scene4": {
       "start": 27.5,
-      "end": 33.0,
+      "end": 33,
       "heroTitle": "TAUBA TAUBA",
       "subtitle": "husn tera tauba tauba...",
       "pillBadge": "Karan Aujla · Tauba Tauba"
@@ -348,7 +348,7 @@
       "duration": 13.5,
       "stanzas": [
         {
-          "start": 0.0,
+          "start": 0,
           "end": 6.5,
           "lines": [
             {
@@ -424,11 +424,11 @@
                 {
                   "w": "meri",
                   "s": 11.2,
-                  "e": 12.0
+                  "e": 12
                 },
                 {
                   "w": "jaan",
-                  "s": 12.0,
+                  "s": 12,
                   "e": 12.8
                 }
               ]
@@ -439,7 +439,7 @@
     },
     "scene2": {
       "start": 13.5,
-      "end": 22.0,
+      "end": 22,
       "line1": {
         "text": "tu ban ja",
         "start": 13.5,
@@ -448,28 +448,28 @@
       "line2": {
         "text": "SOULMATE",
         "start": 15.5,
-        "end": 18.0
+        "end": 18
       },
       "line3": {
         "text": "meri jaan",
-        "start": 18.0,
-        "end": 20.0
+        "start": 18,
+        "end": 20
       },
       "line4": {
         "text": "soulmate",
-        "start": 20.0,
-        "end": 22.0
+        "start": 20,
+        "end": 22
       }
     },
     "scene3": {
-      "start": 22.0,
+      "start": 22,
       "end": 27.5,
       "line1": "tujhe chahta hoon",
       "line2": "BEPANAAH"
     },
     "scene4": {
       "start": 27.5,
-      "end": 33.0,
+      "end": 33,
       "heroTitle": "SOULMATE",
       "subtitle": "tu ban ja mera soulmate...",
       "pillBadge": "Arijit Singh · Soulmate"
@@ -520,7 +520,7 @@
       "duration": 13.5,
       "stanzas": [
         {
-          "start": 0.0,
+          "start": 0,
           "end": 6.4,
           "lines": [
             {
@@ -596,7 +596,7 @@
     },
     "scene2": {
       "start": 13.5,
-      "end": 22.0,
+      "end": 22,
       "line1": {
         "text": "ve kamleya",
         "start": 13.5,
@@ -605,28 +605,28 @@
       "line2": {
         "text": "VE KAMLEYA",
         "start": 15.5,
-        "end": 18.0
+        "end": 18
       },
       "line3": {
         "text": "mere dil",
-        "start": 18.0,
-        "end": 20.0
+        "start": 18,
+        "end": 20
       },
       "line4": {
         "text": "kamleya",
-        "start": 20.0,
-        "end": 22.0
+        "start": 20,
+        "end": 22
       }
     },
     "scene3": {
-      "start": 22.0,
+      "start": 22,
       "end": 27.5,
       "line1": "kyun jaave tu",
       "line2": "USKE PEECHE"
     },
     "scene4": {
       "start": 27.5,
-      "end": 33.0,
+      "end": 33,
       "heroTitle": "VE KAMLEYA",
       "subtitle": "ve kamleya mere naadaan dil...",
       "pillBadge": "Arijit Singh · Ve Kamleya"
@@ -677,7 +677,7 @@
       "duration": 13.5,
       "stanzas": [
         {
-          "start": 0.0,
+          "start": 0,
           "end": 6.2,
           "lines": [
             {
@@ -753,7 +753,7 @@
     },
     "scene2": {
       "start": 13.5,
-      "end": 22.0,
+      "end": 22,
       "line1": {
         "text": "jo tum mere",
         "start": 13.5,
@@ -762,28 +762,28 @@
       "line2": {
         "text": "HO JAO",
         "start": 15.5,
-        "end": 18.0
+        "end": 18
       },
       "line3": {
         "text": "meri har",
-        "start": 18.0,
-        "end": 20.0
+        "start": 18,
+        "end": 20
       },
       "line4": {
         "text": "duaa",
-        "start": 20.0,
-        "end": 22.0
+        "start": 20,
+        "end": 22
       }
     },
     "scene3": {
-      "start": 22.0,
+      "start": 22,
       "end": 27.5,
       "line1": "kya darr phir",
       "line2": "IS JAHAAN KA"
     },
     "scene4": {
       "start": 27.5,
-      "end": 33.0,
+      "end": 33,
       "heroTitle": "JO TUM MERE HO",
       "subtitle": "jo tum mere ho...",
       "pillBadge": "Anuv Jain · Jo Tum Mere Ho"
@@ -834,7 +834,7 @@
       "duration": 13.5,
       "stanzas": [
         {
-          "start": 0.0,
+          "start": 0,
           "end": 6.5,
           "lines": [
             {
@@ -925,7 +925,7 @@
     },
     "scene2": {
       "start": 13.5,
-      "end": 22.0,
+      "end": 22,
       "line1": {
         "text": "pehle bhi main",
         "start": 13.5,
@@ -934,28 +934,28 @@
       "line2": {
         "text": "TUMSE MILA",
         "start": 15.5,
-        "end": 18.0
+        "end": 18
       },
       "line3": {
         "text": "pehli dafa",
-        "start": 18.0,
-        "end": 20.0
+        "start": 18,
+        "end": 20
       },
       "line4": {
         "text": "milke laga",
-        "start": 20.0,
-        "end": 22.0
+        "start": 20,
+        "end": 22
       }
     },
     "scene3": {
-      "start": 22.0,
+      "start": 22,
       "end": 27.5,
       "line1": "tune chhua toh",
       "line2": "SAANSEIN RUK GAYIN"
     },
     "scene4": {
       "start": 27.5,
-      "end": 33.0,
+      "end": 33,
       "heroTitle": "PEHLE BHI MAIN",
       "subtitle": "pehle bhi main tumse mila hoon...",
       "pillBadge": "Vishal Mishra · Pehle Bhi Main"
@@ -987,7 +987,7 @@
     "drop_line1": "tere bina nahi",
     "drop_line2": "JINA GUZARA",
     "subtitle": "satranga ban ja tu...",
-    "status": "pending",
+    "status": "completed",
     "stanzas_text": [
       {
         "start": 0.5,
@@ -1001,7 +1001,9 @@
         "line1": "satranga ban ja tu",
         "line2": "mere ishq da rang"
       }
-    ]
+    ],
+    "completed_at": "2026-11-03T07:27:25.995Z",
+    "video_file": "satranga_aesthetic_9_16.mp4"
   },
   {
     "id": "ishq",
@@ -1029,7 +1031,7 @@
     "drop_line1": "ho gaya hai",
     "drop_line2": "TERA DEEWANA",
     "subtitle": "ishq tera laage jaan se pyaara...",
-    "status": "pending",
+    "status": "completed",
     "stanzas_text": [
       {
         "start": 0.5,
@@ -1043,7 +1045,9 @@
         "line1": "dil yeh sambhalta nahi",
         "line2": "tere bina sajna"
       }
-    ]
+    ],
+    "completed_at": "2026-11-03T07:28:02.404Z",
+    "video_file": "ishq_aesthetic_9_16.mp4"
   },
   {
     "id": "tum_se",
@@ -1071,7 +1075,7 @@
     "drop_line1": "saari khushiyan",
     "drop_line2": "TERE NAAM KIYIN",
     "subtitle": "tum se hi din dhalta hai...",
-    "status": "pending",
+    "status": "completed",
     "stanzas_text": [
       {
         "start": 0.5,
@@ -1085,7 +1089,9 @@
         "line1": "tum se hi dhadkan",
         "line2": "dil ki har baat meri"
       }
-    ]
+    ],
+    "completed_at": "2026-11-03T07:28:39.165Z",
+    "video_file": "tum_se_aesthetic_9_16.mp4"
   },
   {
     "id": "apna_bana_le",
@@ -1113,7 +1119,7 @@
     "drop_line1": "chhod ke saara",
     "drop_line2": "JAG TERE PEECHE",
     "subtitle": "apna bana le piya...",
-    "status": "pending",
+    "status": "completed",
     "stanzas_text": [
       {
         "start": 0.5,
@@ -1127,7 +1133,9 @@
         "line1": "dil ke nagar mein",
         "line2": "ghar basaa le piya"
       }
-    ]
+    ],
+    "completed_at": "2026-11-03T07:29:16.109Z",
+    "video_file": "apna_bana_le_aesthetic_9_16.mp4"
   },
   {
     "id": "kesariya",
@@ -1155,7 +1163,7 @@
     "drop_line1": "beete saare din",
     "drop_line2": "TERI FIKRAAN MEIN",
     "subtitle": "kesariya tera ishq hai piya...",
-    "status": "pending",
+    "status": "completed",
     "stanzas_text": [
       {
         "start": 0.5,
@@ -1169,6 +1177,8 @@
         "line1": "rang jaaun jo main",
         "line2": "haath lagaun tujhe"
       }
-    ]
+    ],
+    "completed_at": "2026-11-03T07:29:54.632Z",
+    "video_file": "kesariya_aesthetic_9_16.mp4"
   }
 ]
